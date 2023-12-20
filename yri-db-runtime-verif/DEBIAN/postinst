@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+echo -e "export YRI_DB_RUNTIME_VERIF_HOME_FOLDER=/opt/yri-db-runtime-verif" >> /etc/environment
+
+echo -e "export YRI_DB_RUNTIME_VERIF_FILE_ABSOLUTEPATH_CONFIGURATION_PROPERTY_FILE=/opt/yri-db-runtime-verif/YRI-DB-RUNTIME-VERIF.properties" >> /etc/environment
+
+sh /etc/environment
+
+ln -s /lib/systemd/system/yri-db-runtime-verif.service /etc/systemd/system/yri-db-runtime-verif.service
+
+systemctl daemon-reload &
+
+systemctl enable yri-db-runtime-verif.service &
+
+systemctl start yri-db-runtime-verif.service &
+
+chmod +x /etc/init.d/yri-db-runtime-verif.sh 
+
+update-rc.d yri-db-runtime-verif.sh defaults
+
+/etc/init.d/yri-db-runtime-verif.sh start &
+

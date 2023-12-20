@@ -1,0 +1,37 @@
+#!/bin/bash
+
+. configuration-properties.sh
+
+echo "YRI_SD_MEALY_MACHINE_COMPILER_FULL_PATH: $YRI_SD_MEALY_MACHINE_COMPILER_FULL_PATH"
+
+
+mkdir -p ${COMPILER_GENERATED_OUTPUT_FOLDER_FULL_PATH}
+
+
+for f in $(dir ${YRI_SD_MEALY_MACHINE_SPEC_FOLDER_FULL_PATH});
+do
+	echo "compiling a C++ runtime monitor for input specification: '${YRI_SD_MEALY_MACHINE_SPEC_FOLDER_FULL_PATH}/$f'"
+
+	${YRI_SD_MEALY_MACHINE_COMPILER_FULL_PATH} \
+		-i "${YRI_SD_MEALY_MACHINE_SPEC_FOLDER_FULL_PATH}/$f" \
+		-d "${COMPILER_GENERATED_OUTPUT_FOLDER_FULL_PATH}"
+
+	MEALY_MACHINE_NAME=$(cat outputted_SD_MEALY_MACHINE_NAME.txt)
+
+	rm -f "${MEALY_MACHINE_NAME}"
+
+done
+
+
+sleep 0.3
+
+
+rm -f ${COMPILER_GENERATED_OUTPUT_FOLDER_FULL_PATH}/*.orig
+
+cp -r ${COMPILER_GENERATED_OUTPUT_FOLDER_FULL_PATH}/* ${YRI_DB_RUNTIME_VERIF_SRC_FULL_PATH}
+
+
+rm -f *.dot *.pdf
+
+rm outputted_SD_MEALY_MACHINE_NAME.txt
+

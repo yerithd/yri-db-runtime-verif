@@ -1,0 +1,25 @@
+### HOW TO BUILD AND CREATE A DEBIAN '.deb' PACKAGE FOR YOUR PROJECT
+
+You compile and build this project with the
+bash script '**_yri_db_runtime_verif_BUILD_DEBIAN_PACKAGE.sh_**',
+which automatically generates a **_DEBIAN 
+INSTALLATION PACKAGE FILE ('.deb')_**.
+
+
+### HOW TO USE "UNINSTALL SCRIPT"
+
+BASH SCRIPT '**_yri_DB_RUNTIME_VERIF_uninstall.sh_**'
+UNINSTALLS A CURRENT INSTANCE OF
+THIS PROJECT ON YOUR SYSTEM.
+
+
+### HOW TO USE "INSTALL SCRIPT"
+
+BASH SCRIPT '**_yri_DB_RUNTIME_VERIF_INSTALL.SH_**'
+INSTALLS THE DEBIAN PACKAGE 
+'**_yri-db-runtime-verif.deb_**' GENERATED UPON
+SUCCESSFUL COMPILATION, ON YOUR SYSTEM.
+
+### REPORT BUGS / IMPROVEMENT
+
+CONTACT ME AT **_GMAIL_**: **_yeroth.d_**

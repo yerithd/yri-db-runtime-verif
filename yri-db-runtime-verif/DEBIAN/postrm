@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sed -i '/YRI_DB_RUNTIME_VERIF_HOME_FOLDER/d' /etc/environment
+sed -i '/YRI_DB_RUNTIME_VERIF_FILE_ABSOLUTEPATH_CONFIGURATION_PROPERTY_FILE/d' /etc/environment
+rm -f /etc/systemd/system/yri-db-runtime-verif.*
+rm -f /lib/systemd/system/yri-db-runtime-verif.*
