@@ -13,7 +13,7 @@ else{
         DESTDIR = $$OUT_PWD/lib
 }
 
-TARGET = yri-db-runtime-verif_FOR_YEROTH_ERP
+TARGET = yri-db-runtime-verif_FOR_YERITH_ERP
 
 QT += core
 QT += gui

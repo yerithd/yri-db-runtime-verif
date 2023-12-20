@@ -59,7 +59,7 @@ bool YRDBRUNTIMEVERIF_ProcessInfo::CHECK_WHETHER_DAEMON_PROCESS_IS_RUNNING(QStri
 //									.arg(a_daemon_process_ID_STR),
 //								  output_file_size);
 
-		return YRI_DB_RUNTIME_VERIF_Utils::GREP_YEROTH_FILE_CONTENT(yerithpsoutput_file,
+		return YRI_DB_RUNTIME_VERIF_Utils::GREP_YERITH_FILE_CONTENT(yerithpsoutput_file,
 													 executable_full_path,
 													 a_daemon_process_ID_STR);
 	}

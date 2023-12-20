@@ -72,12 +72,12 @@ int YRDBRUNTIMEVERIF_Process::start_PROCESS_AND_READ_PROCESS_output_INTO_FILE(co
                                                                       &
                                                                       program_executable_args)
 {
-    QProcess A_YEROTH_PROCESS;
+    QProcess A_YERITH_PROCESS;
 
-    A_YEROTH_PROCESS.start(program_executable_location_full_path,
+    A_YERITH_PROCESS.start(program_executable_location_full_path,
                            program_executable_args);
 
-    if (!A_YEROTH_PROCESS.waitForFinished())
+    if (!A_YERITH_PROCESS.waitForFinished())
     {
         return -1;
     }
@@ -86,7 +86,7 @@ int YRDBRUNTIMEVERIF_Process::start_PROCESS_AND_READ_PROCESS_output_INTO_FILE(co
 
     if (tmpFile.open(QFile::WriteOnly))
     {
-        tmpFile.write(A_YEROTH_PROCESS.readAllStandardOutput().trimmed());
+        tmpFile.write(A_YERITH_PROCESS.readAllStandardOutput().trimmed());
     }
     else
     {

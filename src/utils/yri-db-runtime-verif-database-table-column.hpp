@@ -18,7 +18,7 @@ class YRI_DB_RUNTIME_VERIF_DatabaseTableColumn
 {
 public:
 
-    YEROTH_CLASS_OPERATORS static const QString IS_SERVICE;
+    YERITH_CLASS_OPERATORS static const QString IS_SERVICE;
 
     static const QString IS_VENTE_EN_GROS;
 

@@ -10,7 +10,7 @@
 
 ### SAMPLE INPUT state diagram mealy machine FILE
 
-src/YEROTH_QVGE_sample_SAFETY_PROPERY_one.XGR (yerith_qvge input file)
+src/YERITH_QVGE_sample_SAFETY_PROPERY_one.XGR (yerith_qvge input file)
 
 
 ### ENVIRONMENT VARIABLES

@@ -16,7 +16,7 @@ YRI_DB_RUNTIME_VERIF_ProgressBar::YRI_DB_RUNTIME_VERIF_ProgressBar(YRDBRUNTIMEVE
 {
     setVisible(false);
 
-    QString RGB_COLOR_TO_DISPLAY_AT_YEROTH_PROGRESS_BAR_BACKGROUND = "255, 48, 48";
+    QString RGB_COLOR_TO_DISPLAY_AT_YERITH_PROGRESS_BAR_BACKGROUND = "255, 48, 48";
 
     if (0 != aYerothParentWindow)
     {
@@ -26,7 +26,7 @@ YRI_DB_RUNTIME_VERIF_ProgressBar::YRI_DB_RUNTIME_VERIF_ProgressBar(YRDBRUNTIMEVE
         const QColor &aQColor =
             aYerothCommonWindowToolBar.palette().color(QPalette::Button);
 
-        RGB_COLOR_TO_DISPLAY_AT_YEROTH_PROGRESS_BAR_BACKGROUND =
+        RGB_COLOR_TO_DISPLAY_AT_YERITH_PROGRESS_BAR_BACKGROUND =
             QString("%1, %2, %3")
                 .arg(QString::number(aQColor.red()),
                      QString::number(aQColor.green()),
@@ -41,7 +41,7 @@ YRI_DB_RUNTIME_VERIF_ProgressBar::YRI_DB_RUNTIME_VERIF_ProgressBar(YRDBRUNTIMEVE
                           "background-color: rgb(%1); "
                           "color: rgb(2, 160, 70); "
                           "width: 3px;}")
-    				.arg(RGB_COLOR_TO_DISPLAY_AT_YEROTH_PROGRESS_BAR_BACKGROUND));
+    				.arg(RGB_COLOR_TO_DISPLAY_AT_YERITH_PROGRESS_BAR_BACKGROUND));
 
     int width = qCeil(((QMainWindow *) parent())->width() / 2.0);
 

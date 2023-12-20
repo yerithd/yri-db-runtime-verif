@@ -3,10 +3,10 @@
 # @EMAIL: yerith.d@gmail.com
 
 
-#yri_compile_LIB_FOR_YEROTH_ERP_3_0_j4.sh
+#yri_compile_LIB_FOR_YERITH_ERP_3_0_j4.sh
 
-#cp lib/libyri-db-runtime-verif_FOR_YEROTH_ERP.a "${YEROTH_ERP_3_0_HOME_FOLDER}/lib"
-#echo "cp lib/libyri-db-runtime-verif_FOR_YEROTH_ERP.a '${YEROTH_ERP_3_0_HOME_FOLDER}/lib'"
+#cp lib/libyri-db-runtime-verif_FOR_YERITH_ERP.a "${YERITH_ERP_3_0_HOME_FOLDER}/lib"
+#echo "cp lib/libyri-db-runtime-verif_FOR_YERITH_ERP.a '${YERITH_ERP_3_0_HOME_FOLDER}/lib'"
 
 
 MYFILE=YRI_DB_RUNTIME_VERIF_HEADERS_FOR_yerith_erp.TXT
@@ -20,7 +20,7 @@ n=1
 while read LINE; do
 	CUR_YRI_DEV_FILE=`find src -name "${LINE}"`
 
-	FILE_TO_REPLACE="${YEROTH_ERP_3_0_HOME_FOLDER}/src/${LINE}"
+	FILE_TO_REPLACE="${YERITH_ERP_3_0_HOME_FOLDER}/src/${LINE}"
 
 	echo "cp "${CUR_YRI_DEV_FILE}" "${FILE_TO_REPLACE}""
 

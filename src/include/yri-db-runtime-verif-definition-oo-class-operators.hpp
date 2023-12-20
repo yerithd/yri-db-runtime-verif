@@ -4,18 +4,18 @@
  *      Author: DR.-ING. DIPL.-INF. XAVIER NOUNDOU
  */
 
-#ifndef _YEROTH_ERP_3_0_DEFINITION_OO_CLASS_OPERATORS_HPP_
-#define _YEROTH_ERP_3_0_DEFINITION_OO_CLASS_OPERATORS_HPP_
+#ifndef _YERITH_ERP_3_0_DEFINITION_OO_CLASS_OPERATORS_HPP_
+#define _YERITH_ERP_3_0_DEFINITION_OO_CLASS_OPERATORS_HPP_
 
 
 #include <cstdlib>
 
 
-#define YEROTH_CLASS_OPERATORS  \
+#define YERITH_CLASS_OPERATORS  \
     inline void *operator new[](size_t size){ return calloc(1, size); } \
     inline void *operator new(size_t size){ return calloc(1, size); } \
     inline void operator delete[](void *ptr){ free(ptr); } \
     inline void operator delete[](void *ptr, size_t){ free(ptr); } \
     inline void operator delete(void *ptr){ free(ptr); } \
     inline void operator delete(void *ptr, size_t){ free(ptr); }
-#endif //_YEROTH_ERP_3_0_DEFINITION_OO_CLASS_OPERATORS_HPP_
+#endif //_YERITH_ERP_3_0_DEFINITION_OO_CLASS_OPERATORS_HPP_

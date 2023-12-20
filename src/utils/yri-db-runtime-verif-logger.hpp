@@ -16,15 +16,15 @@ class YRI_DB_RUNTIME_VERIF_Logger
 {
 public:
 
-    typedef enum _YEROTH_LOG_LEVEL
+    typedef enum _YERITH_LOG_LEVEL
     {
-        YEROTH_DEBUG = 0,
-        YEROTH_LOG,
-        YEROTH_WARN
-    } YEROTH_LOG_LEVEL;
+        YERITH_DEBUG = 0,
+        YERITH_LOG,
+        YERITH_WARN
+    } YERITH_LOG_LEVEL;
 
     YRI_DB_RUNTIME_VERIF_Logger(QString cppClassName,
-                               YEROTH_LOG_LEVEL logLevel = YEROTH_LOG);
+                               YERITH_LOG_LEVEL logLevel = YERITH_LOG);
 
     ~YRI_DB_RUNTIME_VERIF_Logger();
 
@@ -75,7 +75,7 @@ public:
 
 private:
 
-    YEROTH_LOG_LEVEL _logLevel;
+    YERITH_LOG_LEVEL _logLevel;
 
     QString _cppClassName;
 

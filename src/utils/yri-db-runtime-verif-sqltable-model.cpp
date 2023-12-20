@@ -74,7 +74,7 @@ YRI_DB_RUNTIME_VERIF_SqlTableModel(const QString &sqlTableName,
 
 YRI_DB_RUNTIME_VERIF_SqlTableModel::~YRI_DB_RUNTIME_VERIF_SqlTableModel()
 {
-    YEROTH_DELETE_FREE_POINTER_NOW(_logger);
+    YERITH_DELETE_FREE_POINTER_NOW(_logger);
 }
 
 
@@ -233,11 +233,11 @@ bool YRI_DB_RUNTIME_VERIF_SqlTableModel::insertNewRecord(QSqlRecord &record,
 
     resetFilter();
 
-    YEROTH_ERP_3_0_START_DATABASE_TRANSACTION;
+    YERITH_ERP_3_0_START_DATABASE_TRANSACTION;
 
     bool success = insertRecord(-1, record);
 
-    YEROTH_ERP_3_0_COMMIT_DATABASE_TRANSACTION;
+    YERITH_ERP_3_0_COMMIT_DATABASE_TRANSACTION;
 
     //qDebug() << QString("YerothSqlTableModel::insertNewRecord, success: %1")
     //                          .arg(BOOL_TO_STRING(success));
@@ -345,11 +345,11 @@ bool YRI_DB_RUNTIME_VERIF_SqlTableModel::updateRecord(unsigned row,
     _logger->log("updateRecord",
                  QString("Table name: %1").arg(sqlTableName()));
 
-    YEROTH_ERP_3_0_START_DATABASE_TRANSACTION;
+    YERITH_ERP_3_0_START_DATABASE_TRANSACTION;
 
     bool success = setRecord(row, record);
 
-    YEROTH_ERP_3_0_COMMIT_DATABASE_TRANSACTION;
+    YERITH_ERP_3_0_COMMIT_DATABASE_TRANSACTION;
 
     if (!success)
     {

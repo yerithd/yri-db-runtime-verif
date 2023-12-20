@@ -196,7 +196,7 @@ int main(int argc, char *argv[])
 
     QFile file_EN_template_EVENT_LOG_TEX(YRI_DB_RUNTIME_VERIF_Utils::FILE_YRI_DB_RUNTIME_VERIF_EVENT_LOG_PDF_TEMPLATE_EN);
 
-    YRI_DB_RUNTIME_VERIF_Utils::YEROTH_READ_FILE_CONTENT(file_EN_template_EVENT_LOG_TEX,
+    YRI_DB_RUNTIME_VERIF_Utils::YERITH_READ_FILE_CONTENT(file_EN_template_EVENT_LOG_TEX,
                                                         YRI_DB_RUNTIME_VERIF_Utils::EN_template_EVENT_LOG_TEX_document);
 
 

@@ -209,7 +209,7 @@ void YRI_DB_RUNTIME_VERIF_Utils::
 }
 
 
-bool YRI_DB_RUNTIME_VERIF_Utils::GREP_YEROTH_FILE_CONTENT(const QString &file_full_path,
+bool YRI_DB_RUNTIME_VERIF_Utils::GREP_YERITH_FILE_CONTENT(const QString &file_full_path,
                                                          const QString &EXECUTABLE_full_path,
                                                          const QString &keyword_IN)
 {
@@ -239,7 +239,7 @@ bool YRI_DB_RUNTIME_VERIF_Utils::GREP_YEROTH_FILE_CONTENT(const QString &file_fu
 }
 
 
-void YRI_DB_RUNTIME_VERIF_Utils::YEROTH_READ_FILE_CONTENT(QFile   &file,
+void YRI_DB_RUNTIME_VERIF_Utils::YERITH_READ_FILE_CONTENT(QFile   &file,
                                                          QString &fileContentVar)
 {
 	if (file.open(QIODevice::ReadOnly))
@@ -256,25 +256,25 @@ void YRI_DB_RUNTIME_VERIF_Utils::YEROTH_READ_FILE_CONTENT(QFile   &file,
 }
 
 
-void YRI_DB_RUNTIME_VERIF_Utils::YEROTH_CREATE_FOLDER(const QString &aFullPathDir)
+void YRI_DB_RUNTIME_VERIF_Utils::YERITH_CREATE_FOLDER(const QString &aFullPathDir)
 {
     QFileInfo aFullPathDirInfo(aFullPathDir);
 
     if (!aFullPathDirInfo.exists())
     {
-        qDebug() << "[YRI_DB_RUNTIME_VERIF_Utils] YEROTH_CREATE_FOLDER"
+        qDebug() << "[YRI_DB_RUNTIME_VERIF_Utils] YERITH_CREATE_FOLDER"
                  << QString("Folder '%1' does not exist !").arg(aFullPathDir);
 
         QDir tempFileDir;
 
         if (tempFileDir.mkpath(aFullPathDir))
         {
-            qDebug() << "[YRI_DB_RUNTIME_VERIF_Utils] YEROTH_CREATE_FOLDER"
+            qDebug() << "[YRI_DB_RUNTIME_VERIF_Utils] YERITH_CREATE_FOLDER"
                      << QString("Created folder '%1' !").arg(aFullPathDir);
         }
         else
         {
-            qDebug() << "[YRI_DB_RUNTIME_VERIF_Utils] YEROTH_CREATE_FOLDER"
+            qDebug() << "[YRI_DB_RUNTIME_VERIF_Utils] YERITH_CREATE_FOLDER"
                      << QString("Could not Create folder '%1' !").arg(aFullPathDir);
         }
     }
@@ -289,20 +289,20 @@ YRI_DB_RUNTIME_VERIF_Utils::start_PROCESS_AND_GET_PROCESS_output_AS_QSTRING
 {
     program_output_IN_OUT.clear();
 
-    QProcess A_YEROTH_PROCESS;
+    QProcess A_YERITH_PROCESS;
 
-    A_YEROTH_PROCESS.start(program_executable_location_full_path,
+    A_YERITH_PROCESS.start(program_executable_location_full_path,
                            program_executable_args);
 
 //    qDebug() << "program_executable_location_full_path: " << program_executable_location_full_path;
 //    qDebug() << "program_executable_args: " << program_executable_args;
 
-    if (!A_YEROTH_PROCESS.waitForFinished())
+    if (!A_YERITH_PROCESS.waitForFinished())
     {
         return -1;
     }
 
-    program_output_IN_OUT.append(A_YEROTH_PROCESS.
+    program_output_IN_OUT.append(A_YERITH_PROCESS.
                                  readAllStandardOutput().trimmed());
 
     return program_output_IN_OUT.size();
@@ -319,12 +319,12 @@ start_PROCESS_AND_READ_PROCESS_output_INTO_FILE(const QString &
                                                 const QStringList &
                                                 program_executable_args)
 {
-    QProcess A_YEROTH_PROCESS;
+    QProcess A_YERITH_PROCESS;
 
-    A_YEROTH_PROCESS.start(program_executable_location_full_path,
+    A_YERITH_PROCESS.start(program_executable_location_full_path,
                            program_executable_args);
 
-    if (!A_YEROTH_PROCESS.waitForFinished())
+    if (!A_YERITH_PROCESS.waitForFinished())
     {
         return -1;
     }
@@ -333,7 +333,7 @@ start_PROCESS_AND_READ_PROCESS_output_INTO_FILE(const QString &
 
     if (tmpFile.open(QFile::WriteOnly))
     {
-        tmpFile.write(A_YEROTH_PROCESS.readAllStandardOutput().trimmed());
+        tmpFile.write(A_YERITH_PROCESS.readAllStandardOutput().trimmed());
     }
     else
     {
@@ -348,7 +348,7 @@ start_PROCESS_AND_READ_PROCESS_output_INTO_FILE(const QString &
 }
 
 
-bool YRI_DB_RUNTIME_VERIF_Utils::GZIP_YEROTH_FILE(const QString &
+bool YRI_DB_RUNTIME_VERIF_Utils::GZIP_YERITH_FILE(const QString &
                                                  program_working_directory_full_path,
                                                  const QString &file_full_path)
 {

@@ -140,16 +140,16 @@ public:
                                        QTableWidgetItem *an_item_widget = 0);
 
 
-    static bool GREP_YEROTH_FILE_CONTENT(const QString &file_full_path,
+    static bool GREP_YERITH_FILE_CONTENT(const QString &file_full_path,
     									 const QString &EXECUTABLE_full_path,
                                          const QString &keyword_IN);
 
 
-    static void YEROTH_READ_FILE_CONTENT(QFile   &file,
+    static void YERITH_READ_FILE_CONTENT(QFile   &file,
                                          QString &fileContentVar);
 
 
-    static void YEROTH_CREATE_FOLDER(const QString &aFullPathDir);
+    static void YERITH_CREATE_FOLDER(const QString &aFullPathDir);
 
 
     static int start_PROCESS_AND_GET_PROCESS_output_AS_QSTRING(const QString 		&program_executable_location_full_path,
@@ -182,7 +182,7 @@ public:
                                                                const QStringList 	&program_executable_args);
 
 
-    static bool GZIP_YEROTH_FILE(const QString &program_working_directory_full_path,
+    static bool GZIP_YERITH_FILE(const QString &program_working_directory_full_path,
                                  const QString &file_full_path);
 
 
@@ -397,7 +397,7 @@ private:
     static QString _logFileName;
 };
 
-#define YEROTH_DELETE_FREE_POINTER_NOW(P) \
+#define YERITH_DELETE_FREE_POINTER_NOW(P) \
     { \
         if (0 != P) \
         { \
@@ -469,13 +469,13 @@ private:
 
 #define NO_OPERATION YRI_DB_RUNTIME_VERIF_Utils::NO_OPERATION();
 
-#define YEROTH_ERP_3_0_START_DATABASE_TRANSACTION YRI_DB_RUNTIME_VERIF_Utils::start_db_transaction()
+#define YERITH_ERP_3_0_START_DATABASE_TRANSACTION YRI_DB_RUNTIME_VERIF_Utils::start_db_transaction()
 
-#define YEROTH_ERP_3_0_ROLLBACK_DATABASE_TRANSACTION YRI_DB_RUNTIME_VERIF_Utils::rollback_db_transaction()
+#define YERITH_ERP_3_0_ROLLBACK_DATABASE_TRANSACTION YRI_DB_RUNTIME_VERIF_Utils::rollback_db_transaction()
 
-#define YEROTH_ERP_3_0_COMMIT_DATABASE_TRANSACTION YRI_DB_RUNTIME_VERIF_Utils::commit_db_transaction()
+#define YERITH_ERP_3_0_COMMIT_DATABASE_TRANSACTION YRI_DB_RUNTIME_VERIF_Utils::commit_db_transaction()
 
-#define POURCENTAGE_YEROTH_GET_VALUE(X, TOTAL) ( (0 == TOTAL) ? 0 : ((X / TOTAL) * 100.0) )
+#define POURCENTAGE_YERITH_GET_VALUE(X, TOTAL) ( (0 == TOTAL) ? 0 : ((X / TOTAL) * 100.0) )
 
 #define GET_CURRENT_DATE_YEAR QString::number((QDate::currentDate().year() != 0) ? QDate::currentDate().year() : 2020)
 
@@ -502,7 +502,7 @@ private:
 
 #define POPULATE_COMBOBOX_MISSING(C, ACONTENT, TABLENAME, FIELD)  YRI_DB_RUNTIME_VERIF_Utils::populateComboBoxMissing(*C, ACONTENT, TABLENAME, FIELD)
 
-#ifdef YEROTH_FRANCAIS_LANGUAGE
+#ifdef YERITH_FRANCAIS_LANGUAGE
 #define GET_NUM_STRING(NUM) YRI_DB_RUNTIME_VERIF_Utils::frenchLocale.toString(NUM)
 #define GET_DOUBLE_STRING(NUM) YRI_DB_RUNTIME_VERIF_Utils::frenchLocale.toString(NUM, 'f', 2)
 #define GET_DOUBLE_STRING_P(NUM, P) YRI_DB_RUNTIME_VERIF_Utils::frenchLocale.toString(NUM, 'f', P)
@@ -512,7 +512,7 @@ private:
 #define GET_MONTH_NAME_LOCALIZED(M) YRI_DB_RUNTIME_VERIF_Utils::frenchLocale.monthName(M)
 #endif
 
-#ifdef YEROTH_ENGLISH_LANGUAGE
+#ifdef YERITH_ENGLISH_LANGUAGE
 #define GET_NUM_STRING(NUM) YRI_DB_RUNTIME_VERIF_Utils::englishLocale.toString(NUM)
 #define GET_DOUBLE_STRING(NUM) YRI_DB_RUNTIME_VERIF_Utils::englishLocale.toString(NUM, 'f', 2)
 #define GET_DOUBLE_STRING_P(NUM, P) YRI_DB_RUNTIME_VERIF_Utils::englishLocale.toString(NUM, 'f', P)

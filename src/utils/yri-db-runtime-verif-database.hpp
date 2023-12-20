@@ -4,8 +4,8 @@
  *      Author: DR.-ING. DIPL.-INF. XAVIER NOUNDOU
  */
 
-#ifndef SRC_UTILS_YEROTH_DATABASE_HPP_
-#define SRC_UTILS_YEROTH_DATABASE_HPP_
+#ifndef SRC_UTILS_YERITH_DATABASE_HPP_
+#define SRC_UTILS_YERITH_DATABASE_HPP_
 
 #include <QtCore/QString>
 
@@ -161,4 +161,4 @@ public:
     }
 };
 
-#endif /* SRC_UTILS_YEROTH_DATABASE_HPP_ */
+#endif /* SRC_UTILS_YERITH_DATABASE_HPP_ */

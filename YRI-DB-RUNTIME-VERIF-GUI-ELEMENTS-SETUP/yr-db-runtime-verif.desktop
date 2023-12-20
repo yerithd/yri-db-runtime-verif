@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=YRI-DB-RUNTIME-VERIF runtime verifier monitoring tester
-Exec=/opt/yri-db-runtime-verif/bin/yri-db-runtime-verif-BIN.SH
-Icon=LOGO-icon.png
-Terminal=false
-Type=Application
-StartupNotify=true
-Hidden=false
-Categories=Utility;Development;

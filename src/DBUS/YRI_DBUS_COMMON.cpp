@@ -82,7 +82,7 @@ void YRI_DBUS_COMMON::TRACE_SUT_LOG_EVENT_complement_info_ON_ACCEPTING_STATE
 				(a_logging_info->A_RUNTIME_MONITOR_name);
 
 
-    		YEROTH_DELETE_FREE_POINTER_NOW(a_logging_info);
+    		YERITH_DELETE_FREE_POINTER_NOW(a_logging_info);
     	}
     }
     //###########################################################################################

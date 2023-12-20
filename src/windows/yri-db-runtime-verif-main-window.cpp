@@ -1861,7 +1861,7 @@ void *YRDBRUNTIMEVERIF_MainWindow::ACTION_USER_GUIDE_method()
 
 	QProcess aProcess;
 
-	progArguments << "/usr/share/doc/yri-db-runtime-verif/YEROTH_QVGE.pdf";
+	progArguments << "/usr/share/doc/yri-db-runtime-verif/YERITH_QVGE.pdf";
 
 	emit SIGNAL_INCREMENT_PROGRESS_BAR(30);
 
