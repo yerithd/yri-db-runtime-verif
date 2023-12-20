@@ -1,6 +1,6 @@
 #!/bin/bash
 #email: yerith.d@gmail.com
-#author: DR.-ING.  DR.-ING. DIPL.-INF. XAVIER NOUNDOU (YERITH R&D)!
+#author: DR.-ING. DIPL.-INF. XAVIER NOUNDOU (YERITH R&D)!
 
 
 rm -f yri-db-runtime-verif.deb
