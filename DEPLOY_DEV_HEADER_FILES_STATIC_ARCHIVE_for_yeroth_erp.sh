@@ -1,6 +1,6 @@
 #!/bin/bash
 # @AUTHOR: DR.-ING. DIPL.-INF. XAVIER NOUNDOU
-# @EMAIL: yeroth.d@gmail.com
+# @EMAIL: yerith.d@gmail.com
 
 
 #yri_compile_LIB_FOR_YEROTH_ERP_3_0_j4.sh
@@ -9,12 +9,12 @@
 #echo "cp lib/libyri-db-runtime-verif_FOR_YEROTH_ERP.a '${YEROTH_ERP_3_0_HOME_FOLDER}/lib'"
 
 
-MYFILE=YRI_DB_RUNTIME_VERIF_HEADERS_FOR_yeroth_erp.TXT
+MYFILE=YRI_DB_RUNTIME_VERIF_HEADERS_FOR_yerith_erp.TXT
 
 echo "processing files within '${MYFILE}'"
 
-echo "cp yri.db-runtime.verif.xml /home/yer/yeroth-erp-3-0/src/dbus/yri.db-runtime.verif.xml "
-cp yri.db-runtime.verif.xml /home/yer/yeroth-erp-3-0/src/dbus/yri.db-runtime.verif.xml 
+echo "cp yri.db-runtime.verif.xml /home/yer/yerith-erp-3-0/src/dbus/yri.db-runtime.verif.xml "
+cp yri.db-runtime.verif.xml /home/yer/yerith-erp-3-0/src/dbus/yri.db-runtime.verif.xml 
 
 n=1
 while read LINE; do

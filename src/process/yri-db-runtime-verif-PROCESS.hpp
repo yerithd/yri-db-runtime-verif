@@ -96,7 +96,7 @@ public:
 
 private:
 
-    static bool _yeroth_YRI_DB_RUNTIME_VERIF_ProcessFilesSet;
+    static bool _yerith_YRI_DB_RUNTIME_VERIF_ProcessFilesSet;
 
 
     static QProcess *_yri_db_runtime_verif_PROCESS;

@@ -406,7 +406,7 @@ void YRDBRUNTIMEVERIF_TableWidget::CLEAR_FILTERING()
     Set_CURRENTLY_filtered(false);
 
 
-    emit yeroth_signal_QTABLEWidget_CLEAR_FILTERING();
+    emit yerith_signal_QTABLEWidget_CLEAR_FILTERING();
 
 
     resize_columns_AND_rows_to_contents();

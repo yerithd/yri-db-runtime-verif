@@ -96,7 +96,7 @@ const QString YRI_DB_RUNTIME_VERIF_Utils::JH_NISSI_CLIENT("yri.db-runtime.verif"
 
 const QString YRI_DB_RUNTIME_VERIF_Utils::JH_NISSI_CLIENT_OBJECT("/");
 
-const QString YRI_DB_RUNTIME_VERIF_Utils::JH_NISSI_SERVER("com.yeroth-erp.server");
+const QString YRI_DB_RUNTIME_VERIF_Utils::JH_NISSI_SERVER("com.yerith-erp.server");
 
 const QString YRI_DB_RUNTIME_VERIF_Utils::JH_NISSI_SERVER_OBJECT("/");
 
@@ -172,7 +172,7 @@ void YRI_DB_RUNTIME_VERIF_Utils::
 
             if (an_item_widget->foreground().color() == Qt::green)
             {
-                result_item_text_COLORED = QString("\\textcolor{yerothColorGreen}{%1}")
+                result_item_text_COLORED = QString("\\textcolor{yerithColorGreen}{%1}")
                                              .arg(result_item_text_COLORED);
             }
             else
@@ -614,27 +614,27 @@ bool YRI_DB_RUNTIME_VERIF_Utils::SAVE_AS_csv_file(QMainWindow    &aCallingWindow
 	}
 
 
-	QString yerothStocksListingCSVFileName
+	QString yerithStocksListingCSVFileName
 				(QString("%1/%2")
 					.arg(YRI_DB_RUNTIME_VERIF_Utils::temporaryFilesDir,
 						 csvFileName));
 
 
-	yerothStocksListingCSVFileName =
-				FILE_NAME_USERID_CURRENT_TIME(yerothStocksListingCSVFileName);
+	yerithStocksListingCSVFileName =
+				FILE_NAME_USERID_CURRENT_TIME(yerithStocksListingCSVFileName);
 
 
-        yerothStocksListingCSVFileName
+        yerithStocksListingCSVFileName
             = QFileDialog::getSaveFileName(&aCallingWindow,
                              	 	 	   "Type in a '.csv' file name ",
-										   yerothStocksListingCSVFileName,
+										   yerithStocksListingCSVFileName,
 										   QString("%1 \"*.csv\" (*.csv)")
                                              .arg(strMessage));
 
 
-    yerothStocksListingCSVFileName.append(".csv");
+    yerithStocksListingCSVFileName.append(".csv");
 
-    QFile tmpFile(yerothStocksListingCSVFileName);
+    QFile tmpFile(yerithStocksListingCSVFileName);
 
 	if (tmpFile.open(QFile::WriteOnly))
 	{

@@ -24,14 +24,14 @@ class QVariant;
 QT_END_NAMESPACE
 
 /*
- * Adaptor class for interface com.yeroth.rd.IYRIruntimeverification
+ * Adaptor class for interface com.yerith.rd.IYRIruntimeverification
  */
 class IYRIruntimeverificationAdaptor: public QDBusAbstractAdaptor
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.yeroth.rd.IYRIruntimeverification")
+    Q_CLASSINFO("D-Bus Interface", "com.yerith.rd.IYRIruntimeverification")
     Q_CLASSINFO("D-Bus Introspection", ""
-"  <interface name=\"com.yeroth.rd.IYRIruntimeverification\">\n"
+"  <interface name=\"com.yerith.rd.IYRIruntimeverification\">\n"
 "    <method name=\"YRI_slot_refresh_INSERT_DB_MYSQL\">\n"
 "      <annotation value=\"QString\" name=\"org.qtproject.QtDBus.QtTypeName.In0\"/>\n"
 "      <annotation value=\"uint\" name=\"org.qtproject.QtDBus.QtTypeName.In1\"/>\n"

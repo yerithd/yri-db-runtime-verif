@@ -1,6 +1,6 @@
 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
 <node>
-  <interface name="com.yeroth-erp.server">
+  <interface name="com.yerith-erp.server">
     <method name="YEROTH_slot_refresh_INSERT_DB_MYSQL">
       <arg type="text" direction="in"/>
       <arg type="uint" direction="in"/>

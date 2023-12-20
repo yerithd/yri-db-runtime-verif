@@ -18,7 +18,7 @@
 
 
 
-bool YRDBRUNTIMEVERIF_Process::_yeroth_YRI_DB_RUNTIME_VERIF_ProcessFilesSet(false);
+bool YRDBRUNTIMEVERIF_Process::_yerith_YRI_DB_RUNTIME_VERIF_ProcessFilesSet(false);
 
 
 
@@ -29,13 +29,13 @@ QProcess *YRDBRUNTIMEVERIF_Process::_alertDeamonProcess(new QProcess);
 
 bool YRDBRUNTIMEVERIF_Process::STOP_yri_db_runtime_verif()
 {
-	if (!_yeroth_YRI_DB_RUNTIME_VERIF_ProcessFilesSet)
+	if (!_yerith_YRI_DB_RUNTIME_VERIF_ProcessFilesSet)
 	{
 		_yri_db_runtime_verif_PROCESS->setStandardErrorFile("/dev/null");
 
 		_yri_db_runtime_verif_PROCESS->setStandardOutputFile("/dev/null");
 
-		_yeroth_YRI_DB_RUNTIME_VERIF_ProcessFilesSet = true;
+		_yerith_YRI_DB_RUNTIME_VERIF_ProcessFilesSet = true;
 	}
 
 	QString msg;

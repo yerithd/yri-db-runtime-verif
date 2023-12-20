@@ -42,7 +42,7 @@ YRI_DB_RUNTIME_VERIF_SqlTableModel(const QSqlQuery &aQSqlQuery):
 {
     _logger = new YRI_DB_RUNTIME_VERIF_Logger("YerothSqlTableModel");
 
-    yerothSetQuery(aQSqlQuery);
+    yerithSetQuery(aQSqlQuery);
 
     setEditStrategy(QSqlTableModel::OnFieldChange);
 }
@@ -80,15 +80,15 @@ YRI_DB_RUNTIME_VERIF_SqlTableModel::~YRI_DB_RUNTIME_VERIF_SqlTableModel()
 
 int
 YRI_DB_RUNTIME_VERIF_SqlTableModel::
-yeroth_RESET_specify_filter_FROM_SELECT_STATEMENT(const QString &filter)
+yerith_RESET_specify_filter_FROM_SELECT_STATEMENT(const QString &filter)
 {
-    QString curYerothSelectStatement(yerothSelectStatement());
+    QString curYerothSelectStatement(yerithSelectStatement());
 
     curYerothSelectStatement.remove(filter);
 
 //      QDEBUG_STRING_OUTPUT_2("RESET filter", curYerothSelectStatement);
 
-    int queryResultSize = yerothSetQueryRowCount(curYerothSelectStatement);
+    int queryResultSize = yerithSetQueryRowCount(curYerothSelectStatement);
 
     return queryResultSize;
 }
@@ -96,15 +96,15 @@ yeroth_RESET_specify_filter_FROM_SELECT_STATEMENT(const QString &filter)
 
 int
 YRI_DB_RUNTIME_VERIF_SqlTableModel::
-yeroth_specify_filter_FROM_SELECT_STATEMENT(const QString &filter)
+yerith_specify_filter_FROM_SELECT_STATEMENT(const QString &filter)
 {
-    QString curYerothSelectStatement(yerothSelectStatement());
+    QString curYerothSelectStatement(yerithSelectStatement());
 
     curYerothSelectStatement.append(QString(" %1").arg(filter));
 
 //      QDEBUG_STRING_OUTPUT_2("filter", curYerothSelectStatement);
 
-    int queryResultSize = yerothSetQueryRowCount(curYerothSelectStatement);
+    int queryResultSize = yerithSetQueryRowCount(curYerothSelectStatement);
 
     return queryResultSize;
 }
@@ -115,7 +115,7 @@ int YRI_DB_RUNTIME_VERIF_SqlTableModel::Is_SearchQSqlTable(QString tableColumn,
 {
     QString queryFilter(GENERATE_SQL_IS_STMT(tableColumn, searchTerm));
 
-    yerothSetFilter_WITH_where_clause(queryFilter);
+    yerithSetFilter_WITH_where_clause(queryFilter);
 
     int filterRowCount = rowCount();
 
@@ -155,7 +155,7 @@ _Is_SearchQSqlTable(enum YerothSqlQueryType, QString tableColumn,
         }
     }
 
-    yerothSetFilter_WITH_where_clause(queryTerm);
+    yerithSetFilter_WITH_where_clause(queryTerm);
 
     int filterRowCount = rowCount();
 
@@ -169,7 +169,7 @@ int YRI_DB_RUNTIME_VERIF_SqlTableModel::Like_SearchQSqlTable(QString tableColumn
 {
     QString queryFilter(GENERATE_SQL_LIKE_STMT(tableColumn, searchTerm));
 
-    yerothSetFilter_WITH_where_clause(queryFilter);
+    yerithSetFilter_WITH_where_clause(queryFilter);
 
     int filterRowCount = rowCount();
 
@@ -216,7 +216,7 @@ _Like_SearchQSqlTable(enum YerothSqlQueryType, QString tableColumn,
         }
     }
 
-    yerothSetFilter_WITH_where_clause(queryTerm);
+    yerithSetFilter_WITH_where_clause(queryTerm);
 
     int filterRowCount = rowCount();
 
@@ -369,7 +369,7 @@ bool YRI_DB_RUNTIME_VERIF_SqlTableModel::updateRecord(unsigned row,
 
 void YRI_DB_RUNTIME_VERIF_SqlTableModel::resetFilter()
 {
-    yerothSetFilter_WITH_where_clause(YRI_DB_RUNTIME_VERIF_Utils::EMPTY_STRING);
+    yerithSetFilter_WITH_where_clause(YRI_DB_RUNTIME_VERIF_Utils::EMPTY_STRING);
     select();
 }
 
@@ -387,7 +387,7 @@ int YRI_DB_RUNTIME_VERIF_SqlTableModel::easySelect()
 }
 
 
-bool YRI_DB_RUNTIME_VERIF_SqlTableModel::yerothSetSort(int column,
+bool YRI_DB_RUNTIME_VERIF_SqlTableModel::yerithSetSort(int column,
                                                       Qt::SortOrder order)
 {
     setSort(column, order);
@@ -396,13 +396,13 @@ bool YRI_DB_RUNTIME_VERIF_SqlTableModel::yerothSetSort(int column,
 
 int
 YRI_DB_RUNTIME_VERIF_SqlTableModel::
-yerothSetQueryRowCount(const QString &STRING_aSqlQuery)
+yerithSetQueryRowCount(const QString &STRING_aSqlQuery)
 {
     QSqlQueryModel::setQuery(STRING_aSqlQuery);
 
     if (lastError().isValid())
     {
-        qDebug() << "++ YerothSqlTableModel::yerothSetQuery(QString): \n\t"
+        qDebug() << "++ YerothSqlTableModel::yerithSetQuery(QString): \n\t"
                  << STRING_aSqlQuery << "\n" << lastError();
 
         return -1;
@@ -414,13 +414,13 @@ yerothSetQueryRowCount(const QString &STRING_aSqlQuery)
 }
 
 
-bool YRI_DB_RUNTIME_VERIF_SqlTableModel::yerothSetQuery(const QString &aSqlQuery)
+bool YRI_DB_RUNTIME_VERIF_SqlTableModel::yerithSetQuery(const QString &aSqlQuery)
 {
     QSqlQueryModel::setQuery(aSqlQuery);
 
     if (lastError().isValid())
     {
-        qDebug() << "++ YerothSqlTableModel::yerothSetQuery(QString): \n\t"
+        qDebug() << "++ YerothSqlTableModel::yerithSetQuery(QString): \n\t"
                  << aSqlQuery << "\n" << lastError();
 
         return false;

@@ -58,7 +58,7 @@ public:
 
     void find_AND_SET_CURRENT_INDEX(const QString &a_text_TO_FIND_IN);
 
-    inline void yeroth_remove_item(const QString &text)
+    inline void yerith_remove_item(const QString &text)
     {
         removeItem(findText(text));
     }

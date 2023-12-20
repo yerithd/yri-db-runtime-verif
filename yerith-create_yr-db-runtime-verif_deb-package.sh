@@ -1,5 +1,5 @@
 #!/bin/bash
-#email: yeroth.d@gmail.com
+#email: yerith.d@gmail.com
 #author: DR.-ING.  DR.-ING. DIPL.-INF. XAVIER NOUNDOU (YEROTH R&D)!
 
 

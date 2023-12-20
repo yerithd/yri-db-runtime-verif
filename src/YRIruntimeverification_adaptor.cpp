@@ -35,7 +35,7 @@ IYRIruntimeverificationAdaptor::~IYRIruntimeverificationAdaptor()
 
 bool IYRIruntimeverificationAdaptor::YRI_slot_refresh_DELETE_DB_MYSQL(const QString &in0, uint in1)
 {
-    // handle method call com.yeroth.rd.IYRIruntimeverification.YRI_slot_refresh_DELETE_DB_MYSQL
+    // handle method call com.yerith.rd.IYRIruntimeverification.YRI_slot_refresh_DELETE_DB_MYSQL
     bool out0;
     QMetaObject::invokeMethod(parent(), "YRI_slot_refresh_DELETE_DB_MYSQL", Q_RETURN_ARG(bool, out0), Q_ARG(QString, in0), Q_ARG(uint, in1));
     return out0;
@@ -43,7 +43,7 @@ bool IYRIruntimeverificationAdaptor::YRI_slot_refresh_DELETE_DB_MYSQL(const QStr
 
 bool IYRIruntimeverificationAdaptor::YRI_slot_refresh_INSERT_DB_MYSQL(const QString &in0, uint in1)
 {
-    // handle method call com.yeroth.rd.IYRIruntimeverification.YRI_slot_refresh_INSERT_DB_MYSQL
+    // handle method call com.yerith.rd.IYRIruntimeverification.YRI_slot_refresh_INSERT_DB_MYSQL
     bool out0;
     QMetaObject::invokeMethod(parent(), "YRI_slot_refresh_INSERT_DB_MYSQL", Q_RETURN_ARG(bool, out0), Q_ARG(QString, in0), Q_ARG(uint, in1));
     return out0;
@@ -51,7 +51,7 @@ bool IYRIruntimeverificationAdaptor::YRI_slot_refresh_INSERT_DB_MYSQL(const QStr
 
 bool IYRIruntimeverificationAdaptor::YRI_slot_refresh_SELECT_DB_MYSQL(const QString &in0, uint in1)
 {
-    // handle method call com.yeroth.rd.IYRIruntimeverification.YRI_slot_refresh_SELECT_DB_MYSQL
+    // handle method call com.yerith.rd.IYRIruntimeverification.YRI_slot_refresh_SELECT_DB_MYSQL
     bool out0;
     QMetaObject::invokeMethod(parent(), "YRI_slot_refresh_SELECT_DB_MYSQL", Q_RETURN_ARG(bool, out0), Q_ARG(QString, in0), Q_ARG(uint, in1));
     return out0;
@@ -59,7 +59,7 @@ bool IYRIruntimeverificationAdaptor::YRI_slot_refresh_SELECT_DB_MYSQL(const QStr
 
 bool IYRIruntimeverificationAdaptor::YRI_slot_refresh_UPDATE_DB_MYSQL(const QString &in0, uint in1)
 {
-    // handle method call com.yeroth.rd.IYRIruntimeverification.YRI_slot_refresh_UPDATE_DB_MYSQL
+    // handle method call com.yerith.rd.IYRIruntimeverification.YRI_slot_refresh_UPDATE_DB_MYSQL
     bool out0;
     QMetaObject::invokeMethod(parent(), "YRI_slot_refresh_UPDATE_DB_MYSQL", Q_RETURN_ARG(bool, out0), Q_ARG(QString, in0), Q_ARG(uint, in1));
     return out0;

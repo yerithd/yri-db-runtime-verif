@@ -28,7 +28,7 @@ bool YRDBRUNTIMEVERIF_ProcessInfo::CHECK_WHETHER_DAEMON_PROCESS_IS_RUNNING(QStri
 	if (logger)
 	{
 		logger->log
-		("yeroth-erp-3-0 | YRDBRUNTIMEVERIF_ProcessInfo::CHECK_WHETHER_DAEMON_PROCESS_IS_RUNNING");
+		("yerith-erp-3-0 | YRDBRUNTIMEVERIF_ProcessInfo::CHECK_WHETHER_DAEMON_PROCESS_IS_RUNNING");
 	}
 
 	QStringList progArguments;
@@ -38,19 +38,19 @@ bool YRDBRUNTIMEVERIF_ProcessInfo::CHECK_WHETHER_DAEMON_PROCESS_IS_RUNNING(QStri
 
 	QString PGREP_Program("/usr/bin/pgrep");
 
-	QString yerothpsoutput_file(QString("%1/%2_psoutput")
+	QString yerithpsoutput_file(QString("%1/%2_psoutput")
 									.arg(YRI_DB_RUNTIME_VERIF_Config::temporaryFilesDir,
 										 QString(".%1")
 										 	 .arg(a_daemon_process_ID_STR)));
 
 //	QDEBUG_STRING_OUTPUT_2(QString("%1: temporary psoutput file: ")
 //								.arg(a_daemon_process_ID_STR),
-//						   yerothpsoutput_file);
+//						   yerithpsoutput_file);
 
 	int output_file_size =
 			YRDBRUNTIMEVERIF_Process::start_PROCESS_AND_READ_PROCESS_output_INTO_FILE
 								(PGREP_Program,
-								 yerothpsoutput_file,
+								 yerithpsoutput_file,
 								 progArguments);
 
 	if (output_file_size > 0)
@@ -59,7 +59,7 @@ bool YRDBRUNTIMEVERIF_ProcessInfo::CHECK_WHETHER_DAEMON_PROCESS_IS_RUNNING(QStri
 //									.arg(a_daemon_process_ID_STR),
 //								  output_file_size);
 
-		return YRI_DB_RUNTIME_VERIF_Utils::GREP_YEROTH_FILE_CONTENT(yerothpsoutput_file,
+		return YRI_DB_RUNTIME_VERIF_Utils::GREP_YEROTH_FILE_CONTENT(yerithpsoutput_file,
 													 executable_full_path,
 													 a_daemon_process_ID_STR);
 	}

@@ -1,4 +1,4 @@
-/* yeroth. Add C includes here */
+/* yerith. Add C includes here */
 
 
 #include <cassert>

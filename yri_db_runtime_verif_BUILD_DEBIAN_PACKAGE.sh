@@ -8,5 +8,5 @@ set -x
 yri_compile_j4.sh
 
 
-yeroth-create_yri-db-runtime-verif_deb-package.sh
+yerith-create_yri-db-runtime-verif_deb-package.sh
 

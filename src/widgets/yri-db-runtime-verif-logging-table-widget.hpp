@@ -88,7 +88,7 @@ public slots:
 
 signals:
 
-    void yeroth_signal_QTABLEWidget_CLEAR_FILTERING();
+    void yerith_signal_QTABLEWidget_CLEAR_FILTERING();
 
 
 public:

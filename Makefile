@@ -480,9 +480,9 @@ distdir: FORCE
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents src/windows/yri-db-runtime-verif-COMMONS-window.hpp src/windows/yri-db-runtime-verif-setup-window.hpp src/utils/yri-db-runtime-verif-LOGGING-INFO.hpp src/widgets/yri-db-runtime-verif-combo-box.hpp src/utils/yri-db-runtime-verif-qmap.hpp src/widgets/yri-db-runtime-verif-progress-bar.hpp src/widgets/yri-db-runtime-verif-push-button.hpp src/widgets/yri-db-runtime-verif-logging-table-widget.hpp src/windows/yri-db-runtime-verif-windows.hpp src/windows/yri-db-runtime-verif-main-window.hpp src/include/yri-db-runtime-verif-MONITOR.hpp src/include/yri-db-runtime-verif-definition-oo-class-operators.hpp src/include/yri-db-runtime-verif-definition-format-date-time.hpp src/include/yri-db-runtime-verif-software-text-configuration.hpp src/process/yri-db-runtime-verif-PROCESS.hpp src/process/yri-db-runtime-verif-PROCESS-info.hpp src/DBUS/YRI_DBUS_COMMON.hpp src/utils/yri-db-runtime-verif-logger.hpp src/utils/yri-db-runtime-verif-sqltable-model.hpp src/utils/yri-db-runtime-verif-CONFIG.hpp src/utils/yri-db-runtime-verif-utils.hpp src/utils/yri-db-runtime-verif-database-table-column.hpp src/utils/yri-db-runtime-verif-database.hpp $(DISTDIR)/
 	$(COPY_FILE) --parents yri-db-runtime-verif.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents yr.db-runtime.verif.xml $(DISTDIR)/
+	$(COPY_FILE) --parents yri.db-runtime.verif.xml $(DISTDIR)/
 	$(COPY_FILE) --parents src/windows/yri-db-runtime-verif-COMMONS-window.cpp src/windows/yri-db-runtime-verif-setup-window.cpp src/utils/yri-db-runtime-verif-LOGGING-INFO.cpp src/widgets/yri-db-runtime-verif-combo-box.cpp src/utils/yri-db-runtime-verif-qmap.cpp src/widgets/yri-db-runtime-verif-progress-bar.cpp src/widgets/yri-db-runtime-verif-push-button.cpp src/widgets/yri-db-runtime-verif-logging-table-widget.cpp src/windows/yri-db-runtime-verif-windows.cpp src/windows/yri-db-runtime-verif-main-window.cpp src/include/yri-db-runtime-verif-MONITOR.cpp src/yri-db-runtime-verif.cpp src/process/yri-db-runtime-verif-PROCESS.cpp src/process/yri-db-runtime-verif-PROCESS-info.cpp src/DBUS/YRI_DBUS_COMMON.cpp src/utils/yri-db-runtime-verif-logger.cpp src/utils/yri-db-runtime-verif-sqltable-model.cpp src/utils/yri-db-runtime-verif-CONFIG.cpp src/utils/yri-db-runtime-verif-utils.cpp src/utils/yri-db-runtime-verif-database-table-column.cpp src/utils/yri-db-runtime-verif-database.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents yr.db-runtime.verif.xml $(DISTDIR)/
+	$(COPY_FILE) --parents yri.db-runtime.verif.xml $(DISTDIR)/
 	$(COPY_FILE) --parents verif_adaptor.h $(DISTDIR)/
 	$(COPY_FILE) --parents ui/yri-db-runtime-verif-setup-window.ui ui/yri-db-runtime-verif-main-window.ui $(DISTDIR)/
 
@@ -673,19 +673,19 @@ qrc_yri-db-runtime-verif.cpp: yri-db-runtime-verif.qrc \
 compiler_dbus_adaptor_source_make_all: verif_adaptor.cpp
 compiler_dbus_adaptor_source_clean:
 	-$(DEL_FILE) verif_adaptor.cpp
-verif_adaptor.cpp: yr.db-runtime.verif.xml \
+verif_adaptor.cpp: yri.db-runtime.verif.xml \
 		/usr/lib/qt5/bin/qdbusxml2cpp \
 		verif_adaptor.h
-	/usr/lib/qt5/bin/qdbusxml2cpp -i verif_adaptor.h -a :verif_adaptor.cpp yr.db-runtime.verif.xml
+	/usr/lib/qt5/bin/qdbusxml2cpp -i verif_adaptor.h -a :verif_adaptor.cpp yri.db-runtime.verif.xml
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
 compiler_dbus_adaptor_header_make_all: verif_adaptor.h
 compiler_dbus_adaptor_header_clean:
 	-$(DEL_FILE) verif_adaptor.h
-verif_adaptor.h: yr.db-runtime.verif.xml \
+verif_adaptor.h: yri.db-runtime.verif.xml \
 		/usr/lib/qt5/bin/qdbusxml2cpp
-	/usr/lib/qt5/bin/qdbusxml2cpp -a verif_adaptor.h: yr.db-runtime.verif.xml
+	/usr/lib/qt5/bin/qdbusxml2cpp -a verif_adaptor.h: yri.db-runtime.verif.xml
 
 compiler_dbus_adaptor_moc_make_all: moc/moc_verif_adaptor.cpp
 compiler_dbus_adaptor_moc_clean:
@@ -872,7 +872,8 @@ obj/yri-db-runtime-verif-MONITOR.o: src/include/yri-db-runtime-verif-MONITOR.cpp
 		obj/yri-db-runtime-verif.gch/c++
 	$(CXX) -c -include obj/yri-db-runtime-verif $(CXXFLAGS) $(INCPATH) -o obj/yri-db-runtime-verif-MONITOR.o src/include/yri-db-runtime-verif-MONITOR.cpp
 
-obj/yri-db-runtime-verif.o: src/yri-db-runtime-verif.cpp src/include/yri-db-runtime-verif-MONITOR.hpp \
+obj/yri-db-runtime-verif.o: src/yri-db-runtime-verif.cpp src/YRIruntimeverification_adaptor.h \
+		src/include/yri-db-runtime-verif-MONITOR.hpp \
 		src/include/yri-db-runtime-verif-definition-oo-class-operators.hpp \
 		src/utils/yri-db-runtime-verif-utils.hpp \
 		src/include/yri-db-runtime-verif-definition-format-date-time.hpp \
@@ -1115,12 +1116,10 @@ install_sources: first FORCE
 	$(QINSTALL) /home/yerith/yri-db-runtime-verif/src/utils/yri-db-runtime-verif-database-table-column.hpp $(INSTALL_ROOT)/home/yerith/yri-db-runtime-verif/./yri-db-runtime-verif-database-table-column.hpp
 	$(QINSTALL) /home/yerith/yri-db-runtime-verif/src/utils/yri-db-runtime-verif-database.hpp $(INSTALL_ROOT)/home/yerith/yri-db-runtime-verif/./yri-db-runtime-verif-database.hpp
 	$(QINSTALL) /home/yerith/yri-db-runtime-verif/lib.pro $(INSTALL_ROOT)/home/yerith/yri-db-runtime-verif/./lib.pro
-	$(QINSTALL) /home/yerith/yri-db-runtime-verif/ORIG-yri-db-runtime-verif.pro $(INSTALL_ROOT)/home/yerith/yri-db-runtime-verif/./ORIG-yri-db-runtime-verif.pro
 	$(QINSTALL) /home/yerith/yri-db-runtime-verif/yri-db-runtime-verif.pro $(INSTALL_ROOT)/home/yerith/yri-db-runtime-verif/./yri-db-runtime-verif.pro
 
 uninstall_sources: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith/yri-db-runtime-verif/./yri-db-runtime-verif.pro
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith/yri-db-runtime-verif/./ORIG-yri-db-runtime-verif.pro
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith/yri-db-runtime-verif/./lib.pro
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith/yri-db-runtime-verif/./yri-db-runtime-verif-database.hpp
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith/yri-db-runtime-verif/./yri-db-runtime-verif-database-table-column.hpp

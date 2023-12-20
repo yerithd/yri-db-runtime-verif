@@ -1,8 +1,8 @@
 
-### AUTHOR: XAVIER NOUNDOU (yeroth.d at gmail.com).
+### AUTHOR: XAVIER NOUNDOU (yerith.d at gmail.com).
 
 
-![TRACE EVENT LOG sample image](https://github.com/yerothd/yri-db-runtime-verif/blob/master/YRI_QVGE_example_event_log_TRACE.png?raw=true)
+![TRACE EVENT LOG sample image](https://github.com/yerithd/yri-db-runtime-verif/blob/master/YRI_QVGE_example_event_log_TRACE.png?raw=true)
 
 
 ### MIT SOFTWARE LICENSED
@@ -10,7 +10,7 @@
 
 ### SAMPLE INPUT state diagram mealy machine FILE
 
-src/YEROTH_QVGE_sample_SAFETY_PROPERY_one.XGR (yeroth_qvge input file)
+src/YEROTH_QVGE_sample_SAFETY_PROPERY_one.XGR (yerith_qvge input file)
 
 
 ### ENVIRONMENT VARIABLES
@@ -35,6 +35,6 @@ database connection information.
 
 ### HOW TO BUILD THIS PROJECT
 
-[compilation in file BUILDING.md (https://github.com/yerothd/yri-db-runtime-verif/blob/master/BUILDING.md)](https://github.com/yerothd/yri-db-runtime-verif/blob/master/BUILDING.md)
+[compilation in file BUILDING.md (https://github.com/yerithd/yri-db-runtime-verif/blob/master/BUILDING.md)](https://github.com/yerithd/yri-db-runtime-verif/blob/master/BUILDING.md)
 
 

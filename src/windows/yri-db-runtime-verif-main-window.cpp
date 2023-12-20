@@ -1330,7 +1330,7 @@ void YRDBRUNTIMEVERIF_MainWindow::get_PRINT_OUT_TexTableString(QTableWidget  &cu
 
         if (color_this_row_grey)
         {
-            texTable_IN_OUT.append(QString("\\rowcolor{yerothColorGray}"));
+            texTable_IN_OUT.append(QString("\\rowcolor{yerithColorGray}"));
         }
         else
         {

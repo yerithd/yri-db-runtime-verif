@@ -41,13 +41,13 @@ public:
         return _fromQSqlQuery;
     }
 
-    virtual int yeroth_RESET_specify_filter_FROM_SELECT_STATEMENT(const QString
+    virtual int yerith_RESET_specify_filter_FROM_SELECT_STATEMENT(const QString
                                                                   & filter);
 
-    virtual int yeroth_specify_filter_FROM_SELECT_STATEMENT(const QString &
+    virtual int yerith_specify_filter_FROM_SELECT_STATEMENT(const QString &
                                                             filter);
 
-    inline virtual void yerothSetFilter_WITH_where_clause(const QString &
+    inline virtual void yerithSetFilter_WITH_where_clause(const QString &
                                                           filter)
     {
         QSqlTableModel::setFilter(filter.trimmed());
@@ -112,20 +112,20 @@ public:
         return _sqlTableName;
     }
 
-    inline void yerothSetQuery(const QSqlQuery &query)
+    inline void yerithSetQuery(const QSqlQuery &query)
     {
         QSqlTableModel::setQuery(query);
     }
 
     int easySelect();
 
-    bool yerothSetSort(int column, Qt::SortOrder order);
+    bool yerithSetSort(int column, Qt::SortOrder order);
 
-    int yerothSetQueryRowCount(const QString &STRING_aSqlQuery);
+    int yerithSetQueryRowCount(const QString &STRING_aSqlQuery);
 
-    bool yerothSetQuery(const QString &aSqlQuery);
+    bool yerithSetQuery(const QString &aSqlQuery);
 
-    inline QString yerothSelectStatement()
+    inline QString yerithSelectStatement()
     {
         return QSqlTableModel::selectStatement();
     }
