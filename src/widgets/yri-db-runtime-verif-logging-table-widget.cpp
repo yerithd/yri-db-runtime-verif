@@ -10,22 +10,22 @@
 #include "src/utils/yri-db-runtime-verif-utils.hpp"
 
 
-const uint YRDBRUNTIMEVERIF_TableWidget::MAX_TABLE_WIDGET_ROW_COUNT = 0;
+const uint YRIDBRUNTIMEVERIF_TableWidget::MAX_TABLE_WIDGET_ROW_COUNT = 0;
 
 
-const unsigned int YRDBRUNTIMEVERIF_TableWidget::TIME_STAMP_COLUMN(0);
+const unsigned int YRIDBRUNTIMEVERIF_TableWidget::TIME_STAMP_COLUMN(0);
 
-const unsigned int YRDBRUNTIMEVERIF_TableWidget::SIGNAL_COLUMN(1);
+const unsigned int YRIDBRUNTIMEVERIF_TableWidget::SIGNAL_COLUMN(1);
 
-const unsigned int YRDBRUNTIMEVERIF_TableWidget::SOURCE_COLUMN(2);
+const unsigned int YRIDBRUNTIMEVERIF_TableWidget::SOURCE_COLUMN(2);
 
-const unsigned int YRDBRUNTIMEVERIF_TableWidget::TARGET_COLUMN(3);
+const unsigned int YRIDBRUNTIMEVERIF_TableWidget::TARGET_COLUMN(3);
 
-const unsigned int YRDBRUNTIMEVERIF_TableWidget::changed_or_MODIFIED_database_QTY_COLUMN(4);
+const unsigned int YRIDBRUNTIMEVERIF_TableWidget::changed_or_MODIFIED_database_QTY_COLUMN(4);
 
 
 
-YRDBRUNTIMEVERIF_TableWidget::YRDBRUNTIMEVERIF_TableWidget(QWidget *parent /* = 0 */)
+YRIDBRUNTIMEVERIF_TableWidget::YRIDBRUNTIMEVERIF_TableWidget(QWidget *parent /* = 0 */)
 :QTableWidget(parent),
  _IS_CURRENTLY_FILTERED(false),
  _TIMESTAMPtem(0),
@@ -59,7 +59,7 @@ YRDBRUNTIMEVERIF_TableWidget::YRDBRUNTIMEVERIF_TableWidget(QWidget *parent /* = 
 }
 
 
-void YRDBRUNTIMEVERIF_TableWidget::setQStandardItemFlags(Qt::ItemFlags &flags)
+void YRIDBRUNTIMEVERIF_TableWidget::setQStandardItemFlags(Qt::ItemFlags &flags)
 {
     QTableWidgetItem *curItem = 0;
 
@@ -79,7 +79,7 @@ void YRDBRUNTIMEVERIF_TableWidget::setQStandardItemFlags(Qt::ItemFlags &flags)
 }
 
 
-void YRDBRUNTIMEVERIF_TableWidget::setQStandardItemFlags(QTableWidgetItem &anItem,
+void YRIDBRUNTIMEVERIF_TableWidget::setQStandardItemFlags(QTableWidgetItem &anItem,
 						   	   	   	   	   	   	   	     Qt::ItemFlags 	  &flags)
 {
 	anItem.setTextAlignment(Qt::AlignVCenter | Qt::AlignHCenter);
@@ -87,7 +87,7 @@ void YRDBRUNTIMEVERIF_TableWidget::setQStandardItemFlags(QTableWidgetItem &anIte
 }
 
 
-void YRDBRUNTIMEVERIF_TableWidget::setMaxSize(uint MAX_SIZE)
+void YRIDBRUNTIMEVERIF_TableWidget::setMaxSize(uint MAX_SIZE)
 {
 	setRowCount(MAX_SIZE);
 
@@ -95,7 +95,7 @@ void YRDBRUNTIMEVERIF_TableWidget::setMaxSize(uint MAX_SIZE)
 }
 
 
-void YRDBRUNTIMEVERIF_TableWidget::resize_columns_AND_rows_to_contents()
+void YRIDBRUNTIMEVERIF_TableWidget::resize_columns_AND_rows_to_contents()
 {
     if (columnCount() > 1)
     {
@@ -108,9 +108,9 @@ void YRDBRUNTIMEVERIF_TableWidget::resize_columns_AND_rows_to_contents()
 
 /*
  * THIS METHOS IS meant to be only called by
- * class 'YRDBRUNTIMEVERIF_MainWindow.tableWidget_LOGGING_4'.
+ * class 'YRIDBRUNTIMEVERIF_MainWindow.tableWidget_LOGGING_4'.
  */
-int YRDBRUNTIMEVERIF_TableWidget::ADD_ITEM_3(QString Source_file__line_number)
+int YRIDBRUNTIMEVERIF_TableWidget::ADD_ITEM_3(QString Source_file__line_number)
 {
 	static bool first_time_call = true;
 
@@ -159,7 +159,7 @@ int YRDBRUNTIMEVERIF_TableWidget::ADD_ITEM_3(QString Source_file__line_number)
 }
 
 
-int YRDBRUNTIMEVERIF_TableWidget::ADD_ITEM_2(QString SQL_QUERY_STRING,
+int YRIDBRUNTIMEVERIF_TableWidget::ADD_ITEM_2(QString SQL_QUERY_STRING,
                                              QString TIMESTAMP)
 {
 	static bool first_time_call = true;
@@ -203,9 +203,9 @@ int YRDBRUNTIMEVERIF_TableWidget::ADD_ITEM_2(QString SQL_QUERY_STRING,
 
 /*
  * THIS METHOS IS meant to be only called by
- * class 'YRDBRUNTIMEVERIF_MainWindow.tableWidget_LOGGING_2'.
+ * class 'YRIDBRUNTIMEVERIF_MainWindow.tableWidget_LOGGING_2'.
  */
-int YRDBRUNTIMEVERIF_TableWidget::ADD_ITEM_2(QString Source_file__line_number)
+int YRIDBRUNTIMEVERIF_TableWidget::ADD_ITEM_2(QString Source_file__line_number)
 {
 	static bool first_time_call = true;
 
@@ -251,7 +251,7 @@ int YRDBRUNTIMEVERIF_TableWidget::ADD_ITEM_2(QString Source_file__line_number)
 }
 
 
-int YRDBRUNTIMEVERIF_TableWidget::ADD_ITEM_1(QString Precondition__Or__POST_CONDITION)
+int YRIDBRUNTIMEVERIF_TableWidget::ADD_ITEM_1(QString Precondition__Or__POST_CONDITION)
 {
     static bool first_time_call = true;
 
@@ -285,7 +285,7 @@ int YRDBRUNTIMEVERIF_TableWidget::ADD_ITEM_1(QString Precondition__Or__POST_COND
 }
 
 
-int YRDBRUNTIMEVERIF_TableWidget::ADD_ITEM(QString TIMESTAMPtem,
+int YRIDBRUNTIMEVERIF_TableWidget::ADD_ITEM(QString TIMESTAMPtem,
 										   QString SIGNALItem,
 		   	   	   	   	   	   	   	   	   QString SOURCEItem,
 										   QString TARGETItem,
@@ -370,7 +370,7 @@ int YRDBRUNTIMEVERIF_TableWidget::ADD_ITEM(QString TIMESTAMPtem,
 }
 
 
-void YRDBRUNTIMEVERIF_TableWidget::CLEAR_FILTERING()
+void YRIDBRUNTIMEVERIF_TableWidget::CLEAR_FILTERING()
 {
     int row_size = rowCount();
 
@@ -413,7 +413,7 @@ void YRDBRUNTIMEVERIF_TableWidget::CLEAR_FILTERING()
 }
 
 
-uint YRDBRUNTIMEVERIF_TableWidget::FILTER_ITEM(const QString &SIGNALItem_TEXT,
+uint YRIDBRUNTIMEVERIF_TableWidget::FILTER_ITEM(const QString &SIGNALItem_TEXT,
                                                bool exact_sql_event_query)
 {
     if (SIGNALItem_TEXT.isEmpty())
@@ -508,7 +508,7 @@ uint YRDBRUNTIMEVERIF_TableWidget::FILTER_ITEM(const QString &SIGNALItem_TEXT,
 }
 
 
-uint YRDBRUNTIMEVERIF_TableWidget::
+uint YRIDBRUNTIMEVERIF_TableWidget::
         FILTER__SUT_SOURCE__ITEM(const QString &SUT_SOURCEItem_TEXT)
 {
     if (SUT_SOURCEItem_TEXT.isEmpty())

@@ -78,9 +78,9 @@ int main(int argc, char *argv[])
     QApplication::setStyle(QStyleFactory::create("cde"));
 
 
-    YRDBRUNTIMEVERIF_Windows all_windows(app.desktop());
+    YRIDBRUNTIMEVERIF_Windows all_windows(app.desktop());
 
-    all_windows.createAll_YRDBRUNTIMEVERIF_Windows();
+    all_windows.createAll_YRIDBRUNTIMEVERIF_Windows();
 
     YRI_DB_RUNTIME_VERIF_Config::SET_ALL_WINDOWS_instance(&all_windows);
 

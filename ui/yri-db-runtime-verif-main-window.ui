@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>YRDBRUNTIMEVERIF_MainWindow</class>
- <widget class="QMainWindow" name="YRDBRUNTIMEVERIF_MainWindow">
+ <class>YRIDBRUNTIMEVERIF_MainWindow</class>
+ <widget class="QMainWindow" name="YRIDBRUNTIMEVERIF_MainWindow">
   <property name="windowModality">
    <enum>Qt::NonModal</enum>
   </property>
@@ -1632,7 +1632,7 @@
      <attribute name="title">
       <string>SQL Error Event Reporting Logging</string>
      </attribute>
-     <widget class="YRDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_ERROR_EVENT">
+     <widget class="YRIDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_ERROR_EVENT">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -2253,7 +2253,7 @@
        </property>
       </column>
      </widget>
-     <widget class="YRDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_ERROR_SOURCE_LOCATION">
+     <widget class="YRIDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_ERROR_SOURCE_LOCATION">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -2818,7 +2818,7 @@
        </property>
       </column>
      </widget>
-     <widget class="YRDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_guarded_condition_expression">
+     <widget class="YRIDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_guarded_condition_expression">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -3386,7 +3386,7 @@
        </property>
       </column>
      </widget>
-     <widget class="YRDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_4">
+     <widget class="YRIDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_4">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -3962,7 +3962,7 @@
        </property>
       </column>
      </widget>
-     <widget class="YRDBRUNTIMEVERIF_ComboBox" name="comboBox_RUNTIME_MONITOR_NAME_Error_LOGGING">
+     <widget class="YRIDBRUNTIMEVERIF_ComboBox" name="comboBox_RUNTIME_MONITOR_NAME_Error_LOGGING">
       <property name="geometry">
        <rect>
         <x>294</x>
@@ -4497,7 +4497,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="YRDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_SQL_recovery_executed_query">
+     <widget class="YRIDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_SQL_recovery_executed_query">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -5067,7 +5067,7 @@
        </property>
       </column>
      </widget>
-     <widget class="YRDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_postconditions">
+     <widget class="YRIDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_postconditions">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -5615,7 +5615,7 @@
        </property>
       </column>
      </widget>
-     <widget class="YRDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_PRECONDITIONS">
+     <widget class="YRIDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_PRECONDITIONS">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -7166,7 +7166,7 @@
      <attribute name="title">
       <string>SQL Event Logging</string>
      </attribute>
-     <widget class="YRDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING">
+     <widget class="YRIDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -7787,7 +7787,7 @@
        </property>
       </column>
      </widget>
-     <widget class="YRDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_2">
+     <widget class="YRIDBRUNTIMEVERIF_TableWidget" name="tableWidget_LOGGING_2">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -8371,7 +8371,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="YRDBRUNTIMEVERIF_ComboBox" name="comboBox_RUNTIME_MONITOR_NAME_Logging">
+     <widget class="YRIDBRUNTIMEVERIF_ComboBox" name="comboBox_RUNTIME_MONITOR_NAME_Logging">
       <property name="geometry">
        <rect>
         <x>4</x>
@@ -10417,7 +10417,7 @@ background-color: rgb(0, 0, 0); </string>
      <string>Reset</string>
     </property>
    </widget>
-   <widget class="YRDBRUNTIMEVERIF_ComboBox" name="comboBox_global_filtering">
+   <widget class="YRIDBRUNTIMEVERIF_ComboBox" name="comboBox_global_filtering">
     <property name="geometry">
      <rect>
       <x>151</x>
@@ -11409,7 +11409,7 @@ background-color: rgb(0, 0, 0); </string>
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="YRDBRUNTIMEVERIF_ComboBox" name="comboBox_SQL_event_filtering">
+   <widget class="YRIDBRUNTIMEVERIF_ComboBox" name="comboBox_SQL_event_filtering">
     <property name="geometry">
      <rect>
       <x>12</x>
@@ -14850,12 +14850,12 @@ background-color: rgb(0, 0, 0); </string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>YRDBRUNTIMEVERIF_TableWidget</class>
+   <class>YRIDBRUNTIMEVERIF_TableWidget</class>
    <extends>QTableWidget</extends>
    <header>src/widgets/yri-db-runtime-verif-logging-table-widget.hpp</header>
   </customwidget>
   <customwidget>
-   <class>YRDBRUNTIMEVERIF_ComboBox</class>
+   <class>YRIDBRUNTIMEVERIF_ComboBox</class>
    <extends>QComboBox</extends>
    <header>src/widgets/yri-db-runtime-verif-combo-box.hpp</header>
   </customwidget>

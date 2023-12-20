@@ -13,15 +13,15 @@
 #include <QtWidgets/QTableWidget>
 
 
-class YRDBRUNTIMEVERIF_TableWidget : public QTableWidget
+class YRIDBRUNTIMEVERIF_TableWidget : public QTableWidget
 {
 	Q_OBJECT
 
 public:
 
-	YRDBRUNTIMEVERIF_TableWidget(QWidget *parent = 0);
+	YRIDBRUNTIMEVERIF_TableWidget(QWidget *parent = 0);
 
-	inline virtual ~YRDBRUNTIMEVERIF_TableWidget()
+	inline virtual ~YRIDBRUNTIMEVERIF_TableWidget()
 	{
 	}
 
@@ -116,7 +116,7 @@ private:
 
     Qt::ItemFlags _myQStandardItemFlags;
 
-    YRDBRUNTIMEVERIF_QMap _mapListIdxToElement_db_ID;
+    YRIDBRUNTIMEVERIF_QMap _mapListIdxToElement_db_ID;
 
 
 	QTableWidgetItem *_TIMESTAMPtem;

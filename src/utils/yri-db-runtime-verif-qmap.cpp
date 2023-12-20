@@ -11,7 +11,7 @@
 
 
 
-void YRDBRUNTIMEVERIF_QMap::setMaxSize(uint MAX_SIZE)
+void YRIDBRUNTIMEVERIF_QMap::setMaxSize(uint MAX_SIZE)
 {
 	QMap<uint, QString>::clear();
 
@@ -21,7 +21,7 @@ void YRDBRUNTIMEVERIF_QMap::setMaxSize(uint MAX_SIZE)
 }
 
 
-void YRDBRUNTIMEVERIF_QMap::yri_insert_item(uint 	a_yri_key,
+void YRIDBRUNTIMEVERIF_QMap::yri_insert_item(uint 	a_yri_key,
 										   QString 	a_yri_value)
 {
 	if (_current_IDX >= _max_elements_SIZE)

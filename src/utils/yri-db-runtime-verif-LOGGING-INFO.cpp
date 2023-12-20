@@ -14,7 +14,7 @@
 #include <QtCore/QString>
 
 
-YRDBRUNTIMEVERIF_Logging_Info::YRDBRUNTIMEVERIF_Logging_Info(QString LOGGING_INFO)
+YRIDBRUNTIMEVERIF_Logging_Info::YRIDBRUNTIMEVERIF_Logging_Info(QString LOGGING_INFO)
 {
 	QStringList string_logging_info_LIST = LOGGING_INFO.split('*', Qt::KeepEmptyParts);
 
@@ -54,7 +54,7 @@ YRDBRUNTIMEVERIF_Logging_Info::YRDBRUNTIMEVERIF_Logging_Info(QString LOGGING_INF
 }
 
 
-QString YRDBRUNTIMEVERIF_Logging_Info::toString()
+QString YRIDBRUNTIMEVERIF_Logging_Info::toString()
 {
 	QString result1 =
 			QString("%1*%2*%3*%4*%5*%6*%7*%8*%9")

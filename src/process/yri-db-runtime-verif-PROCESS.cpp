@@ -18,16 +18,16 @@
 
 
 
-bool YRDBRUNTIMEVERIF_Process::_yerith_YRI_DB_RUNTIME_VERIF_ProcessFilesSet(false);
+bool YRIDBRUNTIMEVERIF_Process::_yerith_YRI_DB_RUNTIME_VERIF_ProcessFilesSet(false);
 
 
 
-QProcess *YRDBRUNTIMEVERIF_Process::_yri_db_runtime_verif_PROCESS(new QProcess);
+QProcess *YRIDBRUNTIMEVERIF_Process::_yri_db_runtime_verif_PROCESS(new QProcess);
 
-QProcess *YRDBRUNTIMEVERIF_Process::_alertDeamonProcess(new QProcess);
+QProcess *YRIDBRUNTIMEVERIF_Process::_alertDeamonProcess(new QProcess);
 
 
-bool YRDBRUNTIMEVERIF_Process::STOP_yri_db_runtime_verif()
+bool YRIDBRUNTIMEVERIF_Process::STOP_yri_db_runtime_verif()
 {
 	if (!_yerith_YRI_DB_RUNTIME_VERIF_ProcessFilesSet)
 	{
@@ -52,7 +52,7 @@ bool YRDBRUNTIMEVERIF_Process::STOP_yri_db_runtime_verif()
 	//the following call to function 'check_alert_daemon_process()'
 	//works fine.
 
-	YRDBRUNTIMEVERIF_Process::startAndWaitForFinished(*_yri_db_runtime_verif_PROCESS,
+	YRIDBRUNTIMEVERIF_Process::startAndWaitForFinished(*_yri_db_runtime_verif_PROCESS,
 											  "lxqt-sudo",
 											  progArguments,
 											  60000);
@@ -61,7 +61,7 @@ bool YRDBRUNTIMEVERIF_Process::STOP_yri_db_runtime_verif()
 }
 
 
-int YRDBRUNTIMEVERIF_Process::start_PROCESS_AND_READ_PROCESS_output_INTO_FILE(const
+int YRIDBRUNTIMEVERIF_Process::start_PROCESS_AND_READ_PROCESS_output_INTO_FILE(const
                                                                       QString &
                                                                       program_executable_location_full_path,
                                                                       const
@@ -101,7 +101,7 @@ int YRDBRUNTIMEVERIF_Process::start_PROCESS_AND_READ_PROCESS_output_INTO_FILE(co
 }
 
 
-QString YRDBRUNTIMEVERIF_Process::compileLatex(QString prefixFileName)
+QString YRIDBRUNTIMEVERIF_Process::compileLatex(QString prefixFileName)
 {
     QStringList progArguments;
 
@@ -111,13 +111,13 @@ QString YRDBRUNTIMEVERIF_Process::compileLatex(QString prefixFileName)
 
     progArguments << QString("%1tex").arg(prefixFileName);
 
-    YRDBRUNTIMEVERIF_Process::startAndWaitForFinished(YRI_DB_RUNTIME_VERIF_Config::
+    YRIDBRUNTIMEVERIF_Process::startAndWaitForFinished(YRI_DB_RUNTIME_VERIF_Config::
                                               pathToPdfLatex(), progArguments,
                                               -1);
 
     QThread::sleep(0.3);
 
-    YRDBRUNTIMEVERIF_Process::startAndWaitForFinished(YRI_DB_RUNTIME_VERIF_Config::
+    YRIDBRUNTIMEVERIF_Process::startAndWaitForFinished(YRI_DB_RUNTIME_VERIF_Config::
                                               pathToPdfLatex(), progArguments,
                                               -1);
 
@@ -131,7 +131,7 @@ QString YRDBRUNTIMEVERIF_Process::compileLatex(QString prefixFileName)
 }
 
 
-QString YRDBRUNTIMEVERIF_Process::compileWITH_LUATEX_Latex(QString prefixFileName)
+QString YRIDBRUNTIMEVERIF_Process::compileWITH_LUATEX_Latex(QString prefixFileName)
 {
     QStringList progArguments;
 
@@ -141,7 +141,7 @@ QString YRDBRUNTIMEVERIF_Process::compileWITH_LUATEX_Latex(QString prefixFileNam
 
     progArguments << QString("%1tex").arg(prefixFileName);
 
-    YRDBRUNTIMEVERIF_Process::startAndWaitForFinished(YRI_DB_RUNTIME_VERIF_Config::
+    YRIDBRUNTIMEVERIF_Process::startAndWaitForFinished(YRI_DB_RUNTIME_VERIF_Config::
                                               pathToLualatex(), progArguments,
                                               -1);
     progArguments.clear();
@@ -152,7 +152,7 @@ QString YRDBRUNTIMEVERIF_Process::compileWITH_LUATEX_Latex(QString prefixFileNam
 }
 
 
-QString YRDBRUNTIMEVERIF_Process::startPdfViewerProcess(QString aPDFFileName)
+QString YRIDBRUNTIMEVERIF_Process::startPdfViewerProcess(QString aPDFFileName)
 {
     QStringList progArguments(aPDFFileName);
 
@@ -163,7 +163,7 @@ QString YRDBRUNTIMEVERIF_Process::startPdfViewerProcess(QString aPDFFileName)
 }
 
 
-bool YRDBRUNTIMEVERIF_Process::startDetached(QProcess &aProcess,
+bool YRIDBRUNTIMEVERIF_Process::startDetached(QProcess &aProcess,
                                      QString programFileAbsolutePath,
                                      QStringList programArguments)
 {
@@ -179,7 +179,7 @@ bool YRDBRUNTIMEVERIF_Process::startDetached(QProcess &aProcess,
 }
 
 
-bool YRDBRUNTIMEVERIF_Process::startAndWaitForFinished(QProcess &aProcess,
+bool YRIDBRUNTIMEVERIF_Process::startAndWaitForFinished(QProcess &aProcess,
                                                QString programFileAbsolutePath,
                                                QStringList programArguments,
                                                int waitForFinished)
@@ -198,7 +198,7 @@ bool YRDBRUNTIMEVERIF_Process::startAndWaitForFinished(QProcess &aProcess,
 }
 
 
-bool YRDBRUNTIMEVERIF_Process::startAndWaitForFinished(QString programFileAbsolutePath,
+bool YRIDBRUNTIMEVERIF_Process::startAndWaitForFinished(QString programFileAbsolutePath,
                                                QStringList programArguments,
                                                int waitForFinished)
 {

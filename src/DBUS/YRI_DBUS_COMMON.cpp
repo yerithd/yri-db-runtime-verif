@@ -25,15 +25,15 @@ void YRI_DBUS_COMMON::TRACE_SUT_LOG_EVENT_complement_info_ON_ACCEPTING_STATE
 						 bool PRINT_with_trace_syntax /* = false */)
 {
     //######################################## GUI CODE ########################################
-    YRDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
+    YRIDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
     		YRI_DB_RUNTIME_VERIF_Config::GET_ALL_WINDOWS_instance();
 
     if (0 != ALL_WINDOWS_INSTANCE 								&&
     	0 != ALL_WINDOWS_INSTANCE->_yrdbruntimeverif_main_Window)
     {
-    	YRDBRUNTIMEVERIF_Logging_Info *a_logging_info =
+    	YRIDBRUNTIMEVERIF_Logging_Info *a_logging_info =
     			ALL_WINDOWS_INSTANCE->_yrdbruntimeverif_main_Window
-					->Get_YRDBRUNTIMEVERIF_Logging_Info
+					->Get_YRIDBRUNTIMEVERIF_Logging_Info
 						(_LAST_trace_SQL_event_log_GUI_row_number);
 
 
@@ -70,7 +70,7 @@ void YRI_DBUS_COMMON::TRACE_SUT_LOG_EVENT_complement_info_ON_ACCEPTING_STATE
 
 
     		ALL_WINDOWS_INSTANCE->_yrdbruntimeverif_main_Window
-				->Set_YRDBRUNTIMEVERIF_Logging_Info
+				->Set_YRIDBRUNTIMEVERIF_Logging_Info
 					(_LAST_trace_SQL_event_log_GUI_row_number,
 					 a_logging_info->toString());
 
@@ -115,7 +115,7 @@ void YRI_DBUS_COMMON::TRACE_SUT_LOG_EVENT(YRI_DB_RUNTIME_VERIF_Monitor &a_runtim
 
 
     //######################################## GUI CODE ########################################
-    YRDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
+    YRIDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
     		YRI_DB_RUNTIME_VERIF_Config::GET_ALL_WINDOWS_instance();
 
     if (0 != ALL_WINDOWS_INSTANCE)
@@ -128,7 +128,7 @@ void YRI_DBUS_COMMON::TRACE_SUT_LOG_EVENT(YRI_DB_RUNTIME_VERIF_Monitor &a_runtim
 
         if (0 != ALL_WINDOWS_INSTANCE->_yrdbruntimeverif_main_Window)
         {
-            YRDBRUNTIMEVERIF_Logging_Info a_logging_info;
+            YRIDBRUNTIMEVERIF_Logging_Info a_logging_info;
 
             a_logging_info.A_RUNTIME_MONITOR_QSTRING_ID = a_runtime_monitor.GET_QSTRING_ID();
             a_logging_info.A_RUNTIME_MONITOR_name = a_runtime_monitor.get_RUNTIME_MONITOR_NAME();

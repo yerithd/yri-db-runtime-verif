@@ -16,17 +16,17 @@
 #include <QtCore/QObject>
 
 
-class YRDBRUNTIMEVERIF_CommonsWindow : public QMainWindow
+class YRIDBRUNTIMEVERIF_CommonsWindow : public QMainWindow
 {
 	Q_OBJECT
 
 public:
 
-	inline YRDBRUNTIMEVERIF_CommonsWindow()
+	inline YRIDBRUNTIMEVERIF_CommonsWindow()
 	{
 	}
 
-    inline virtual ~YRDBRUNTIMEVERIF_CommonsWindow()
+    inline virtual ~YRIDBRUNTIMEVERIF_CommonsWindow()
     {
     }
 

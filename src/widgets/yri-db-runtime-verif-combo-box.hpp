@@ -15,15 +15,15 @@
 #include <QtWidgets/QLineEdit>
 
 
-class YRDBRUNTIMEVERIF_ComboBox : public QComboBox
+class YRIDBRUNTIMEVERIF_ComboBox : public QComboBox
 {
 	Q_OBJECT
 
 public:
 
-	YRDBRUNTIMEVERIF_ComboBox(QWidget *parent);
+	YRIDBRUNTIMEVERIF_ComboBox(QWidget *parent);
 
-    inline ~YRDBRUNTIMEVERIF_ComboBox()
+    inline ~YRIDBRUNTIMEVERIF_ComboBox()
     {
     }
 

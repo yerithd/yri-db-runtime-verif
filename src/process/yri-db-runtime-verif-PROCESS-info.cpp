@@ -21,14 +21,14 @@
 
 
 
-bool YRDBRUNTIMEVERIF_ProcessInfo::CHECK_WHETHER_DAEMON_PROCESS_IS_RUNNING(QString a_daemon_process_ID_STR,
+bool YRIDBRUNTIMEVERIF_ProcessInfo::CHECK_WHETHER_DAEMON_PROCESS_IS_RUNNING(QString a_daemon_process_ID_STR,
 																QString executable_full_path,
 																YRI_DB_RUNTIME_VERIF_Logger *logger /* = 0 */)
 {
 	if (logger)
 	{
 		logger->log
-		("yerith-erp-3-0 | YRDBRUNTIMEVERIF_ProcessInfo::CHECK_WHETHER_DAEMON_PROCESS_IS_RUNNING");
+		("yerith-erp-3-0 | YRIDBRUNTIMEVERIF_ProcessInfo::CHECK_WHETHER_DAEMON_PROCESS_IS_RUNNING");
 	}
 
 	QStringList progArguments;
@@ -48,7 +48,7 @@ bool YRDBRUNTIMEVERIF_ProcessInfo::CHECK_WHETHER_DAEMON_PROCESS_IS_RUNNING(QStri
 //						   yerithpsoutput_file);
 
 	int output_file_size =
-			YRDBRUNTIMEVERIF_Process::start_PROCESS_AND_READ_PROCESS_output_INTO_FILE
+			YRIDBRUNTIMEVERIF_Process::start_PROCESS_AND_READ_PROCESS_output_INTO_FILE
 								(PGREP_Program,
 								 yerithpsoutput_file,
 								 progArguments);

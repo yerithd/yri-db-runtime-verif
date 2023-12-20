@@ -18,18 +18,18 @@
 #include "src/utils/yri-db-runtime-verif-utils.hpp"
 
 
-class YRDBRUNTIMEVERIF_Process : public QProcess
+class YRIDBRUNTIMEVERIF_Process : public QProcess
 {
 
 public:
 
-    inline YRDBRUNTIMEVERIF_Process()
+    inline YRIDBRUNTIMEVERIF_Process()
     {
         setWorkingDirectory(YRI_DB_RUNTIME_VERIF_Config::temporaryFilesDir);
     }
 
 
-    inline ~YRDBRUNTIMEVERIF_Process()
+    inline ~YRIDBRUNTIMEVERIF_Process()
     {
     }
 
@@ -51,7 +51,7 @@ public:
                                                                       const QStringList &program_executable_args)
     {
         return
-                        YRDBRUNTIMEVERIF_Process::start_PROCESS_AND_READ_PROCESS_output_INTO_FILE
+                        YRIDBRUNTIMEVERIF_Process::start_PROCESS_AND_READ_PROCESS_output_INTO_FILE
                                 (program_executable_location_full_path,
                                  QString("%1/%2")
                                     .arg(program_working_directory_full_path,

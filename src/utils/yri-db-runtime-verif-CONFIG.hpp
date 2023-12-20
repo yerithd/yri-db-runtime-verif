@@ -17,7 +17,7 @@
 
 
 
-class YRDBRUNTIMEVERIF_Windows;
+class YRIDBRUNTIMEVERIF_Windows;
 
 class YRI_DB_RUNTIME_VERIF_Database;
 
@@ -27,12 +27,12 @@ class YRI_DB_RUNTIME_VERIF_Config
 
 public:
 
-    inline static void SET_ALL_WINDOWS_instance(YRDBRUNTIMEVERIF_Windows *WINDOWS)
+    inline static void SET_ALL_WINDOWS_instance(YRIDBRUNTIMEVERIF_Windows *WINDOWS)
     {
     	ALL_WINDOWS = WINDOWS;
     }
 
-    inline static YRDBRUNTIMEVERIF_Windows *GET_ALL_WINDOWS_instance()
+    inline static YRIDBRUNTIMEVERIF_Windows *GET_ALL_WINDOWS_instance()
     {
     	return ALL_WINDOWS;
     }
@@ -110,7 +110,7 @@ public:
 
     static YRI_DB_RUNTIME_VERIF_Database *_Database__SUT__for__verification_success_Notification;
 
-    static YRDBRUNTIMEVERIF_Windows *ALL_WINDOWS;
+    static YRIDBRUNTIMEVERIF_Windows *ALL_WINDOWS;
 };
 
 #endif /* _YRI_DB_RUNTIME_VERIF_CONFIG_HPP_ */

@@ -17,17 +17,17 @@
 #include <QtCore/QString>
 
 
-class YRDBRUNTIMEVERIF_Logging_Info
+class YRIDBRUNTIMEVERIF_Logging_Info
 {
 public:
 
-	inline YRDBRUNTIMEVERIF_Logging_Info()
+	inline YRIDBRUNTIMEVERIF_Logging_Info()
 	{
 	}
 
-	YRDBRUNTIMEVERIF_Logging_Info(QString LOGGING_INFO);
+	YRIDBRUNTIMEVERIF_Logging_Info(QString LOGGING_INFO);
 
-	virtual inline ~YRDBRUNTIMEVERIF_Logging_Info()
+	virtual inline ~YRIDBRUNTIMEVERIF_Logging_Info()
 	{
 	}
 

@@ -27,18 +27,18 @@
 class YRI_DB_RUNTIME_VERIF_Monitor;
 
 
-class YRDBRUNTIMEVERIF_MainWindow : public YRDBRUNTIMEVERIF_CommonsWindow,
-									public Ui_YRDBRUNTIMEVERIF_MainWindow
+class YRIDBRUNTIMEVERIF_MainWindow : public YRIDBRUNTIMEVERIF_CommonsWindow,
+									public Ui_YRIDBRUNTIMEVERIF_MainWindow
 {
 	Q_OBJECT
 
 
 public:
 
-	YRDBRUNTIMEVERIF_MainWindow();
+	YRIDBRUNTIMEVERIF_MainWindow();
 
 
-    inline virtual ~YRDBRUNTIMEVERIF_MainWindow()
+    inline virtual ~YRIDBRUNTIMEVERIF_MainWindow()
     {
     }
 
@@ -72,7 +72,7 @@ public:
                                QString                        SOURCEItem,
                                QString                        TARGETItem,
                                QString                        changed_OR_modified_database_qty_Item,
-                               YRDBRUNTIMEVERIF_Logging_Info  &a_logging_info);
+                               YRIDBRUNTIMEVERIF_Logging_Info  &a_logging_info);
 
 
 	virtual int ADD_ITEM(QString                        TIMESTAMPtem,
@@ -80,7 +80,7 @@ public:
 						 QString                        SOURCEItem,
 						 QString                        TARGETItem,
 						 QString                        changed_OR_modified_database_qty_Item,
-						 YRDBRUNTIMEVERIF_Logging_Info  &a_logging_info);
+						 YRIDBRUNTIMEVERIF_Logging_Info  &a_logging_info);
 
 
 	virtual void SET__CURRENT__RUNTIME__MONITOR
@@ -113,11 +113,11 @@ public slots:
                                                         QString SutNAMEQString);
 
 
-	virtual void Set_YRDBRUNTIMEVERIF_Logging_Info(uint     row_number,
+	virtual void Set_YRIDBRUNTIMEVERIF_Logging_Info(uint     row_number,
 												   QString  logging_info);
 
 
-	virtual YRDBRUNTIMEVERIF_Logging_Info *Get_YRDBRUNTIMEVERIF_Logging_Info(uint row_number);
+	virtual YRIDBRUNTIMEVERIF_Logging_Info *Get_YRIDBRUNTIMEVERIF_Logging_Info(uint row_number);
 
 
 	virtual void set_connection_DBUS_status(QString	message_STATUS,
@@ -177,7 +177,7 @@ protected slots:
     virtual inline void YRI_on_progress_bar__VIEW_current_RUNTIME_MONITOR()
     {
         YRI_DB_RUNTIME_VERIF_ProgressBar(this)(this,
-                                              &YRDBRUNTIMEVERIF_MainWindow::VIEW_current_RUNTIME_MONITOR);
+                                              &YRIDBRUNTIMEVERIF_MainWindow::VIEW_current_RUNTIME_MONITOR);
     }
 
 
@@ -195,7 +195,7 @@ protected slots:
     inline virtual void yri_PRINT_with_PROGRESS_BAR_ON__event_log_excerpt_till_selected_SQL_event()
     {
         YRI_DB_RUNTIME_VERIF_ProgressBar(this)(this,
-                                              &YRDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt_till_selected_SQL_event);
+                                              &YRIDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt_till_selected_SQL_event);
     }
 
 
@@ -265,7 +265,7 @@ protected slots:
     virtual inline void __Progress_BAR__ACTION_USER_GUIDE_method()
     {
         YRI_DB_RUNTIME_VERIF_ProgressBar(this)(this,
-                                              &YRDBRUNTIMEVERIF_MainWindow::ACTION_USER_GUIDE_method);
+                                              &YRIDBRUNTIMEVERIF_MainWindow::ACTION_USER_GUIDE_method);
     }
 
 
@@ -285,7 +285,7 @@ protected:
     virtual void SET__Sut__VISIBILITY_FOR_logging(QString A_SUT_ID);
 
 
-    virtual YRDBRUNTIMEVERIF_TableWidget *Get_CURRENT_QTable_WIDGET();
+    virtual YRIDBRUNTIMEVERIF_TableWidget *Get_CURRENT_QTable_WIDGET();
 
 
     virtual void set_runtime_monitor_name_ERROR_LOGGING_visible(bool aVisibleValue);
@@ -340,12 +340,12 @@ private:
      * This is used to keep selected row across
      * "tabWidget_SQL_ERROR_EVENT_LOGGING" QTABLEWIDGET.
      */
-    QMap<YRDBRUNTIMEVERIF_TableWidget *, const QModelIndex *>
+    QMap<YRIDBRUNTIMEVERIF_TableWidget *, const QModelIndex *>
         _qtabwidget_logging__To__LAST_SELECTED_row_INDEX;
 
-    YRDBRUNTIMEVERIF_QMap 		_MAP_dbsqlevent__TO__cppfileinfo;
+    YRIDBRUNTIMEVERIF_QMap 		_MAP_dbsqlevent__TO__cppfileinfo;
 
-    YRDBRUNTIMEVERIF_QMap 		_MAP_dbsqlERRORevent__TO__cppfileinfo;
+    YRIDBRUNTIMEVERIF_QMap 		_MAP_dbsqlERRORevent__TO__cppfileinfo;
 };
 
 #endif /* _YRI_DB_RUNTIME_VERIF_MAIN_WINDOW_HPP_ */

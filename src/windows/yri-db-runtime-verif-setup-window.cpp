@@ -18,7 +18,7 @@
 
 
 
-YRDBRUNTIMEVERIF_SetupWindow::YRDBRUNTIMEVERIF_SetupWindow()
+YRIDBRUNTIMEVERIF_SetupWindow::YRIDBRUNTIMEVERIF_SetupWindow()
 {
 	setupUi(this);
 
@@ -26,7 +26,7 @@ YRDBRUNTIMEVERIF_SetupWindow::YRDBRUNTIMEVERIF_SetupWindow()
 
 
 	toolBar_SetupWindow_YRI_DB_RUNTIME_VERIF
-		->setStyleSheet(YRDBRUNTIMEVERIF_MainWindow::QMESSAGE_BOX_STYLE_SHEET);
+		->setStyleSheet(YRIDBRUNTIMEVERIF_MainWindow::QMESSAGE_BOX_STYLE_SHEET);
 
 
 
@@ -68,7 +68,7 @@ YRDBRUNTIMEVERIF_SetupWindow::YRDBRUNTIMEVERIF_SetupWindow()
 }
 
 
-void YRDBRUNTIMEVERIF_SetupWindow::yri_show()
+void YRIDBRUNTIMEVERIF_SetupWindow::yri_show()
 {
     YRI_DB_RUNTIME_VERIF_Config::init_YRI_DB_RUNTIME_VERIF_Config
         (YRI_DB_RUNTIME_VERIF_Config::YRI_DB_RUNTIME_VERIF_FILE_ABSOLUTEPATH_CONFIGURATION_PROPERTY_FILE);
@@ -80,13 +80,13 @@ void YRDBRUNTIMEVERIF_SetupWindow::yri_show()
 
 
 
-    YRDBRUNTIMEVERIF_CommonsWindow::yri_show();
+    YRIDBRUNTIMEVERIF_CommonsWindow::yri_show();
 }
 
 
-void YRDBRUNTIMEVERIF_SetupWindow::ON_STOP__logging__SUT_ACTIONS()
+void YRIDBRUNTIMEVERIF_SetupWindow::ON_STOP__logging__SUT_ACTIONS()
 {
-    YRDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
+    YRIDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
     		YRI_DB_RUNTIME_VERIF_Config::GET_ALL_WINDOWS_instance();
 
     if (0 != ALL_WINDOWS_INSTANCE)
@@ -107,9 +107,9 @@ void YRDBRUNTIMEVERIF_SetupWindow::ON_STOP__logging__SUT_ACTIONS()
 }
 
 
-void YRDBRUNTIMEVERIF_SetupWindow::ON_START__logging__SUT_ACTIONS()
+void YRIDBRUNTIMEVERIF_SetupWindow::ON_START__logging__SUT_ACTIONS()
 {
-    YRDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
+    YRIDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
     		YRI_DB_RUNTIME_VERIF_Config::GET_ALL_WINDOWS_instance();
 
     if (0 != ALL_WINDOWS_INSTANCE)
@@ -133,7 +133,7 @@ void YRDBRUNTIMEVERIF_SetupWindow::ON_START__logging__SUT_ACTIONS()
 }
 
 
-void YRDBRUNTIMEVERIF_SetupWindow::
+void YRIDBRUNTIMEVERIF_SetupWindow::
 		set_connection_DBUS_status(QString  message_STATUS,
 								   bool 	error_not_connected /* = false */)
 {
@@ -141,7 +141,7 @@ void YRDBRUNTIMEVERIF_SetupWindow::
 }
 
 
-void YRDBRUNTIMEVERIF_SetupWindow::ON_choose_path_pdfReader()
+void YRIDBRUNTIMEVERIF_SetupWindow::ON_choose_path_pdfReader()
 {
     QString pdfReaderFilePath =
     		QFileDialog::getOpenFileName(this,
@@ -158,9 +158,9 @@ void YRDBRUNTIMEVERIF_SetupWindow::ON_choose_path_pdfReader()
 }
 
 
-void YRDBRUNTIMEVERIF_SetupWindow::ON_actionRETURN_TO_console_trigerred()
+void YRIDBRUNTIMEVERIF_SetupWindow::ON_actionRETURN_TO_console_trigerred()
 {
-    YRDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
+    YRIDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
     		YRI_DB_RUNTIME_VERIF_Config::GET_ALL_WINDOWS_instance();
 
     if (0 != ALL_WINDOWS_INSTANCE)
@@ -171,7 +171,7 @@ void YRDBRUNTIMEVERIF_SetupWindow::ON_actionRETURN_TO_console_trigerred()
 }
 
 
-void YRDBRUNTIMEVERIF_SetupWindow::ON_pushButton_Reset_parameters_PRESSED()
+void YRIDBRUNTIMEVERIF_SetupWindow::ON_pushButton_Reset_parameters_PRESSED()
 {
     QString msgEnregistrer = QObject::tr("RESET current settings ?");
 
@@ -195,7 +195,7 @@ void YRDBRUNTIMEVERIF_SetupWindow::ON_pushButton_Reset_parameters_PRESSED()
 }
 
 
-void YRDBRUNTIMEVERIF_SetupWindow::ON_pushButton_SAVE_parameters_PRESSED()
+void YRIDBRUNTIMEVERIF_SetupWindow::ON_pushButton_SAVE_parameters_PRESSED()
 {
     QString msgEnregistrer = QObject::tr("Save current settings ?");
 

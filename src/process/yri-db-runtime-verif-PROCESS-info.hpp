@@ -17,16 +17,16 @@
 class YRI_DB_RUNTIME_VERIF_Utils;
 class YRI_DB_RUNTIME_VERIF_Logger;
 
-class YRDBRUNTIMEVERIF_ProcessInfo
+class YRIDBRUNTIMEVERIF_ProcessInfo
 {
 public:
 
 
-    inline YRDBRUNTIMEVERIF_ProcessInfo()
+    inline YRIDBRUNTIMEVERIF_ProcessInfo()
     {
     }
 
-    inline ~YRDBRUNTIMEVERIF_ProcessInfo()
+    inline ~YRIDBRUNTIMEVERIF_ProcessInfo()
     {
     }
 

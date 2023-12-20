@@ -12,7 +12,7 @@
 #include <QtSql/QSqlQuery>
 
 
-YRDBRUNTIMEVERIF_ComboBox::YRDBRUNTIMEVERIF_ComboBox(QWidget *parent)
+YRIDBRUNTIMEVERIF_ComboBox::YRIDBRUNTIMEVERIF_ComboBox(QWidget *parent)
 :QComboBox(parent)
 {
     setLineEdit(new QLineEdit);
@@ -23,13 +23,13 @@ YRDBRUNTIMEVERIF_ComboBox::YRDBRUNTIMEVERIF_ComboBox(QWidget *parent)
 }
 
 
-void YRDBRUNTIMEVERIF_ComboBox::clearField()
+void YRIDBRUNTIMEVERIF_ComboBox::clearField()
 {
     QComboBox::clear();
 }
 
 
-void YRDBRUNTIMEVERIF_ComboBox::yri__setEditable(bool editable)
+void YRIDBRUNTIMEVERIF_ComboBox::yri__setEditable(bool editable)
 {
     QLineEdit *a_qline_edit = lineEdit();
 
@@ -42,7 +42,7 @@ void YRDBRUNTIMEVERIF_ComboBox::yri__setEditable(bool editable)
 }
 
 
-void YRDBRUNTIMEVERIF_ComboBox::find_AND_SET_CURRENT_INDEX(const QString &a_text_TO_FIND_IN)
+void YRIDBRUNTIMEVERIF_ComboBox::find_AND_SET_CURRENT_INDEX(const QString &a_text_TO_FIND_IN)
 {
     int ret_find = findText(a_text_TO_FIND_IN);
 
@@ -59,7 +59,7 @@ void YRDBRUNTIMEVERIF_ComboBox::find_AND_SET_CURRENT_INDEX(const QString &a_text
 }
 
 
-void YRDBRUNTIMEVERIF_ComboBox::addItems(const QStringList &texts)
+void YRIDBRUNTIMEVERIF_ComboBox::addItems(const QStringList &texts)
 {
     QStringList new_texts(texts);
 

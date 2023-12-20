@@ -18,16 +18,16 @@
 #include <QtCore/QObject>
 
 
-class YRDBRUNTIMEVERIF_SetupWindow : public YRDBRUNTIMEVERIF_CommonsWindow,
-									 public Ui_YRDBRUNTIMEVERIF_SetupWindow
+class YRIDBRUNTIMEVERIF_SetupWindow : public YRIDBRUNTIMEVERIF_CommonsWindow,
+									 public Ui_YRIDBRUNTIMEVERIF_SetupWindow
 {
 	Q_OBJECT
 
 public:
 
-	YRDBRUNTIMEVERIF_SetupWindow();
+	YRIDBRUNTIMEVERIF_SetupWindow();
 
-    inline virtual ~YRDBRUNTIMEVERIF_SetupWindow()
+    inline virtual ~YRIDBRUNTIMEVERIF_SetupWindow()
     {
     }
 

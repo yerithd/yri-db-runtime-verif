@@ -19,14 +19,14 @@
 #include "src/process/yri-db-runtime-verif-PROCESS.hpp"
 
 
-const QString YRDBRUNTIMEVERIF_MainWindow::QMESSAGE_BOX_STYLE_SHEET =
+const QString YRIDBRUNTIMEVERIF_MainWindow::QMESSAGE_BOX_STYLE_SHEET =
 		QString("QMessageBox {background-color: rgb(%1);}"
                 "QMessageBox QLabel {color: rgb(%2);}")
 			.arg("47,67,67",
 				 "02,160,70");
 
 
-YRDBRUNTIMEVERIF_MainWindow::YRDBRUNTIMEVERIF_MainWindow()
+YRIDBRUNTIMEVERIF_MainWindow::YRIDBRUNTIMEVERIF_MainWindow()
 :_pushButton_lecteur_de_code_barres_Logging_JUST_CLICKED(false),
  _pushButton_lecteur_de_code_barres_JUST_CLICKED(false),
  _CURRENT_runtime_monitor_name_Filtered(false),
@@ -313,7 +313,7 @@ YRDBRUNTIMEVERIF_MainWindow::YRDBRUNTIMEVERIF_MainWindow()
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::SELECT_Logging_row(uint a_row_selected)
+void YRIDBRUNTIMEVERIF_MainWindow::SELECT_Logging_row(uint a_row_selected)
 {
     tableWidget_LOGGING->selectRow(a_row_selected);
 
@@ -323,7 +323,7 @@ void YRDBRUNTIMEVERIF_MainWindow::SELECT_Logging_row(uint a_row_selected)
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::SELECT_ERROR_LOGGING_row(uint a_row_selected)
+void YRIDBRUNTIMEVERIF_MainWindow::SELECT_ERROR_LOGGING_row(uint a_row_selected)
 {
     tableWidget_LOGGING_ERROR_EVENT->selectRow(a_row_selected);
 
@@ -333,7 +333,7 @@ void YRDBRUNTIMEVERIF_MainWindow::SELECT_ERROR_LOGGING_row(uint a_row_selected)
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
         SET_CURRENT_RUNTIME_MONITOR_name_Logging(QString A_RUNTIME_MONITOR_name)
 {
     if (!A_RUNTIME_MONITOR_name.isEmpty())
@@ -344,7 +344,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
         SET_CURRENT_RUNTIME_MONITOR_name_ERROR_Logging(QString A_RUNTIME_MONITOR_name)
 {
     if (!A_RUNTIME_MONITOR_name.isEmpty())
@@ -355,13 +355,13 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-int YRDBRUNTIMEVERIF_MainWindow::
+int YRIDBRUNTIMEVERIF_MainWindow::
 				ADD_ERROR_ITEM(QString                        TIMESTAMPtem,
                                QString                        SIGNALItem,
                                QString                        SOURCEItem,
                                QString                        TARGETItem,
                                QString                        changed_OR_modified_database_qty_Item,
-                               YRDBRUNTIMEVERIF_Logging_Info  &a_logging_info)
+                               YRIDBRUNTIMEVERIF_Logging_Info  &a_logging_info)
 {
     ++_visible_ERROR_row_counter;
 
@@ -407,13 +407,13 @@ int YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-int YRDBRUNTIMEVERIF_MainWindow::
+int YRIDBRUNTIMEVERIF_MainWindow::
 				ADD_ITEM(QString                        TIMESTAMPtem,
 						 QString                        SIGNALItem,
 						 QString                        SOURCEItem,
 						 QString                        TARGETItem,
 						 QString                        changed_OR_modified_database_qty_Item,
-						 YRDBRUNTIMEVERIF_Logging_Info  &a_logging_info)
+						 YRIDBRUNTIMEVERIF_Logging_Info  &a_logging_info)
 {
     handle_current_tab_changed(tabWidget_SQL_ERROR_EVENT_LOGGING->currentIndex());
 
@@ -466,7 +466,7 @@ int YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow
+void YRIDBRUNTIMEVERIF_MainWindow
 		::SET__CURRENT__RUNTIME__MONITOR
 			(YRI_DB_RUNTIME_VERIF_Monitor *a_current_runtime_monitor_INSTANCE)
 {
@@ -484,14 +484,14 @@ void YRDBRUNTIMEVERIF_MainWindow
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
-	Set_YRDBRUNTIMEVERIF_Logging_Info(uint      row_number,
+void YRIDBRUNTIMEVERIF_MainWindow::
+	Set_YRIDBRUNTIMEVERIF_Logging_Info(uint      row_number,
 									  QString   logging_info)
 {
 	_MAP_dbsqlERRORevent__TO__cppfileinfo
         .yri_insert_item(row_number, logging_info);
 
-	YRDBRUNTIMEVERIF_Logging_Info a_logging_info(logging_info);
+	YRIDBRUNTIMEVERIF_Logging_Info a_logging_info(logging_info);
 
 	if (a_logging_info.IS_ERROR_EVENT_LOGGING())
 	{
@@ -499,7 +499,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
             QString non_error_log_event_COMBOBOX_info =
                 _MAP_dbsqlevent__TO__cppfileinfo.value(row_number);
 
-            YRDBRUNTIMEVERIF_Logging_Info a_logging_NON_ERROR_combobox_info
+            YRIDBRUNTIMEVERIF_Logging_Info a_logging_NON_ERROR_combobox_info
                 (non_error_log_event_COMBOBOX_info);
 
             // WE PUT THIS EVENT ERROR INFORMATION to true so to
@@ -602,34 +602,34 @@ void YRDBRUNTIMEVERIF_MainWindow::
 
 
     //tableWidget_LOGGING_2 ONLY HAS A SINGLE ROW !
-    YRDBRUNTIMEVERIF_MainWindow::
+    YRIDBRUNTIMEVERIF_MainWindow::
         SET__foregroundcolor__ON__accepting_state(tableWidget_LOGGING_2->currentRow(),
                                                   tableWidget_LOGGING_2);
 
 
-	YRDBRUNTIMEVERIF_MainWindow::
+	YRIDBRUNTIMEVERIF_MainWindow::
 		SET__foregroundcolor__ON__accepting_state(row_number,
 												  tableWidget_LOGGING);
 }
 
 
-YRDBRUNTIMEVERIF_Logging_Info *YRDBRUNTIMEVERIF_MainWindow::
-	Get_YRDBRUNTIMEVERIF_Logging_Info(uint row_number)
+YRIDBRUNTIMEVERIF_Logging_Info *YRIDBRUNTIMEVERIF_MainWindow::
+	Get_YRIDBRUNTIMEVERIF_Logging_Info(uint row_number)
 {
-	YRDBRUNTIMEVERIF_Logging_Info *a_logging_info_SAVED = 0;
+	YRIDBRUNTIMEVERIF_Logging_Info *a_logging_info_SAVED = 0;
 
 	if (_MAP_dbsqlevent__TO__cppfileinfo.contains(row_number))
 	{
 		QString a_QSTRING_saved_logging_info = _MAP_dbsqlevent__TO__cppfileinfo.value(row_number);
 
-		a_logging_info_SAVED = new YRDBRUNTIMEVERIF_Logging_Info(a_QSTRING_saved_logging_info);
+		a_logging_info_SAVED = new YRIDBRUNTIMEVERIF_Logging_Info(a_QSTRING_saved_logging_info);
 	}
 
 	return a_logging_info_SAVED;
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::set_connection_DBUS_status(QString message_STATUS,
+void YRIDBRUNTIMEVERIF_MainWindow::set_connection_DBUS_status(QString message_STATUS,
 															 bool 	 error_not_connected /* = false*/)
 {
 	if (!error_not_connected)
@@ -650,7 +650,7 @@ void YRDBRUNTIMEVERIF_MainWindow::set_connection_DBUS_status(QString message_STA
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
 		ON_QTABLEWIDGET_ITEM_pressed(QTableWidgetItem *aQTable_widget_item)
 {
 	if (0 != aQTable_widget_item                            &&
@@ -665,7 +665,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
             _MAP_dbsqlevent__TO__cppfileinfo
                 .value(GET_QTABLEWIDGET_CURRENT_ROW_TO_Select(1));
 
-		YRDBRUNTIMEVERIF_Logging_Info a_logging_info(LOGGING_INFO);
+		YRIDBRUNTIMEVERIF_Logging_Info a_logging_info(LOGGING_INFO);
 
 
         SET__Sut__VISIBILITY_FOR_logging(a_logging_info.A_SUT_string_unique_ID);
@@ -728,7 +728,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
 		ON_QTABLEWIDGET_ERROR_ITEM_pressed(QTableWidgetItem *aQTable_widget_item /* = 0 */)
 {
     if (0 != aQTable_widget_item)
@@ -746,7 +746,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
                 _MAP_dbsqlERRORevent__TO__cppfileinfo
                     .value(current_row_BE_PRESSED_with_a_hidden_button);
 
-            YRDBRUNTIMEVERIF_Logging_Info a_logging_info(LOGGING_INFO);
+            YRIDBRUNTIMEVERIF_Logging_Info a_logging_info(LOGGING_INFO);
 
             set_SQL_current_recovered_query_string
                 (a_logging_info.RECOVERY_SQL_string__ON_ERROR__accepting_state,
@@ -763,7 +763,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
             LOGGING_INFO = _MAP_dbsqlERRORevent__TO__cppfileinfo
                                 .value(GET_QTABLEWIDGET_CURRENT_ROW_TO_Select(0));
 
-            YRDBRUNTIMEVERIF_Logging_Info a_logging_info(LOGGING_INFO);
+            YRIDBRUNTIMEVERIF_Logging_Info a_logging_info(LOGGING_INFO);
 
             if (is_CURRENT_runtime_monitor_name_Filtered())
             {
@@ -794,7 +794,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
             set_runtime_monitor_name_ERROR_LOGGING_visible(true);
 
 
-            YRDBRUNTIMEVERIF_MainWindow::
+            YRIDBRUNTIMEVERIF_MainWindow::
                 SET__foregroundcolor__ON__accepting_state
                     (aQTable_widget_item->row(),
                      tableWidget_LOGGING_ERROR_EVENT,
@@ -802,7 +802,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
 
 
             //tableWidget_LOGGING_ERROR_SOURCE_LOCATION ONLY HAS A SINGLE ROW !
-            YRDBRUNTIMEVERIF_MainWindow::
+            YRIDBRUNTIMEVERIF_MainWindow::
                 SET__foregroundcolor__ON__accepting_state
                     (tableWidget_LOGGING_ERROR_SOURCE_LOCATION->currentRow(),
                      tableWidget_LOGGING_ERROR_SOURCE_LOCATION);
@@ -864,9 +864,9 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-bool YRDBRUNTIMEVERIF_MainWindow::export_csv_file()
+bool YRIDBRUNTIMEVERIF_MainWindow::export_csv_file()
 {
-    YRDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item =
+    YRIDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item =
                                     Get_CURRENT_QTable_WIDGET();
 
     if (0 == current_QTable_Widget_Item)
@@ -883,7 +883,7 @@ bool YRDBRUNTIMEVERIF_MainWindow::export_csv_file()
 }
 
 
-bool YRDBRUNTIMEVERIF_MainWindow::
+bool YRIDBRUNTIMEVERIF_MainWindow::
         set_SQL_current_recovered_query_string(QString SQL_QUERY_STRING,
                                                QString TIMESTAMP /* = "" */)
 {
@@ -900,7 +900,7 @@ bool YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::set_CURRENT_TABWIDGET_ACTION_visible(bool a_value)
+void YRIDBRUNTIMEVERIF_MainWindow::set_CURRENT_TABWIDGET_ACTION_visible(bool a_value)
 {
     QString LOGGING_INFO;
 
@@ -940,7 +940,7 @@ void YRDBRUNTIMEVERIF_MainWindow::set_CURRENT_TABWIDGET_ACTION_visible(bool a_va
     }
 
 
-    YRDBRUNTIMEVERIF_Logging_Info a_logging_info(LOGGING_INFO);
+    YRIDBRUNTIMEVERIF_Logging_Info a_logging_info(LOGGING_INFO);
 
 
     if (1 == tabWidget_SQL_ERROR_EVENT_LOGGING->currentIndex())
@@ -998,7 +998,7 @@ void YRDBRUNTIMEVERIF_MainWindow::set_CURRENT_TABWIDGET_ACTION_visible(bool a_va
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::filter_All_RUNTIME_monitor__ERROR__SQL__EVENTS()
+void YRIDBRUNTIMEVERIF_MainWindow::filter_All_RUNTIME_monitor__ERROR__SQL__EVENTS()
 {
     ON_BUTON_Reset_pressed();
 
@@ -1031,7 +1031,7 @@ void YRDBRUNTIMEVERIF_MainWindow::filter_All_RUNTIME_monitor__ERROR__SQL__EVENTS
             a_CURRENT_LOGGING_INFO = _MAP_dbsqlERRORevent__TO__cppfileinfo
                                                 .value(a_qwidget_item->row());
 
-            YRDBRUNTIMEVERIF_Logging_Info a_CURRENT_logging_info(a_CURRENT_LOGGING_INFO);
+            YRIDBRUNTIMEVERIF_Logging_Info a_CURRENT_logging_info(a_CURRENT_LOGGING_INFO);
 
             if (YRI_DB_RUNTIME_VERIF_Utils::isEqualsCaseSensitive(a_CURRENT_logging_info.A_RUNTIME_MONITOR_name,
                                                                  A_Current_RUNTIME_monitor_Name))
@@ -1052,7 +1052,7 @@ void YRDBRUNTIMEVERIF_MainWindow::filter_All_RUNTIME_monitor__ERROR__SQL__EVENTS
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::UN__filter_All_RUNTIME_monitor__ERROR__SQL__EVENTS()
+void YRIDBRUNTIMEVERIF_MainWindow::UN__filter_All_RUNTIME_monitor__ERROR__SQL__EVENTS()
 {
     QString A_Current_RUNTIME_monitor_Name = GET_CURRENT_RUNTIME_MONITOR_name_Error_LOGGING();
 
@@ -1079,7 +1079,7 @@ void YRDBRUNTIMEVERIF_MainWindow::UN__filter_All_RUNTIME_monitor__ERROR__SQL__EV
             a_CURRENT_LOGGING_INFO = _MAP_dbsqlERRORevent__TO__cppfileinfo
                                                 .value(a_qwidget_item->row());
 
-            YRDBRUNTIMEVERIF_Logging_Info a_CURRENT_logging_info(a_CURRENT_LOGGING_INFO);
+            YRIDBRUNTIMEVERIF_Logging_Info a_CURRENT_logging_info(a_CURRENT_LOGGING_INFO);
 
             if (YRI_DB_RUNTIME_VERIF_Utils::isEqualsCaseSensitive(a_CURRENT_logging_info.A_RUNTIME_MONITOR_name,
                                                                  A_Current_RUNTIME_monitor_Name))
@@ -1094,7 +1094,7 @@ void YRDBRUNTIMEVERIF_MainWindow::UN__filter_All_RUNTIME_monitor__ERROR__SQL__EV
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
         handle_checkBox_ALL_STATE_SAFETY_PROPERTIES_State_CHANGED(int a_state)
 {
     if (Qt::Checked == a_state)
@@ -1108,7 +1108,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-int YRDBRUNTIMEVERIF_MainWindow::
+int YRIDBRUNTIMEVERIF_MainWindow::
         GET_QTABLEWIDGET_CURRENT_ROW_TO_Select(int current_index)
 {
     int current_row_TO_SELECT = 0;
@@ -1151,7 +1151,7 @@ int YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::handle_current_tab_changed(int current_index)
+void YRIDBRUNTIMEVERIF_MainWindow::handle_current_tab_changed(int current_index)
 {
     int current_row_TO_SELECT =
         GET_QTABLEWIDGET_CURRENT_ROW_TO_Select(current_index);
@@ -1200,7 +1200,7 @@ void YRDBRUNTIMEVERIF_MainWindow::handle_current_tab_changed(int current_index)
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
 		SET__foregroundcolor__ON__accepting_state(uint 			row_number,
 												  QTableWidget 	*a_table_widget,
 												  QColor        a_color_to_SET /* = Qt::green */)
@@ -1222,7 +1222,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-void *YRDBRUNTIMEVERIF_MainWindow::VIEW_current_RUNTIME_MONITOR()
+void *YRIDBRUNTIMEVERIF_MainWindow::VIEW_current_RUNTIME_MONITOR()
 {
     YRI_DB_RUNTIME_VERIF_Monitor *a_to_print_DOT_FORMAT_runtime_monitor =
         user_defined_Runtime_Monitors_NAME__TO__RUNTIME_INSTANCES
@@ -1245,7 +1245,7 @@ void *YRDBRUNTIMEVERIF_MainWindow::VIEW_current_RUNTIME_MONITOR()
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
         setLast_SelectedRow_Row_ID(const QModelIndex &a_model_CELL_index)
 {
     _Last_SelectedRow_Row_INDEX = &a_model_CELL_index;
@@ -1269,7 +1269,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::get_PRINT_OUT_TexTableString(QTableWidget  &current_QTable_Widget_Item,
+void YRIDBRUNTIMEVERIF_MainWindow::get_PRINT_OUT_TexTableString(QTableWidget  &current_QTable_Widget_Item,
                                                                QString       &texTable_IN_OUT,
                                                                int           row_MAX_TO_GO_export /* = -1 */)
 {
@@ -1439,17 +1439,17 @@ void YRDBRUNTIMEVERIF_MainWindow::get_PRINT_OUT_TexTableString(QTableWidget  &cu
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::yri_PRINT_with_PROGRESS_BAR_ON__event_log_excerpt(int a_row_FOR_pdf_printing_max /* = -1*/)
+void YRIDBRUNTIMEVERIF_MainWindow::yri_PRINT_with_PROGRESS_BAR_ON__event_log_excerpt(int a_row_FOR_pdf_printing_max /* = -1*/)
 {
     int p = a_row_FOR_pdf_printing_max;
 
     YRI_DB_RUNTIME_VERIF_ProgressBar(this)(this,
                                           &p,
-                                          &YRDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt__POINTER_PARAMETER);
+                                          &YRIDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt__POINTER_PARAMETER);
 }
 
 
-bool YRDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt_till_selected_SQL_event()
+bool YRIDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt_till_selected_SQL_event()
 {
     int a_row_FOR_pdf_printing_max = -1;
 
@@ -1466,9 +1466,9 @@ bool YRDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt_till_selected_SQL_even
 }
 
 
-bool YRDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt(int a_row_FOR_pdf_printing_max /* = -1 */)
+bool YRIDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt(int a_row_FOR_pdf_printing_max /* = -1 */)
 {
-    YRDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item =
+    YRIDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item =
                                     Get_CURRENT_QTable_WIDGET();
 
 
@@ -1523,7 +1523,7 @@ bool YRDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt(int a_row_FOR_pdf_prin
 
 
     EN_template_EVENT_LOG__TexDocument
-        .replace("YRDBRUNTIMEVERIFSUBJECT",
+        .replace("YRIDBRUNTIMEVERIFSUBJECT",
                  "SQL Event log Excerpt");
 
 
@@ -1534,9 +1534,9 @@ bool YRDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt(int a_row_FOR_pdf_prin
     YRI_DB_RUNTIME_VERIF_Utils::getCurrentSimplifiedDateWITHmilliseconds(current_date);
 
 
-    EN_template_EVENT_LOG__TexDocument.replace("YRDBRUNTIMEVERIFPAPERSPEC", "a4paper");
-    EN_template_EVENT_LOG__TexDocument.replace("YRDBRUNTIMEVERIFDATE", current_date);
-    EN_template_EVENT_LOG__TexDocument.replace("YRDBRUNTIMEVERIFPRINTTIME", CURRENT_TIME_WITH_MILLISECONDS);
+    EN_template_EVENT_LOG__TexDocument.replace("YRIDBRUNTIMEVERIFPAPERSPEC", "a4paper");
+    EN_template_EVENT_LOG__TexDocument.replace("YRIDBRUNTIMEVERIFDATE", current_date);
+    EN_template_EVENT_LOG__TexDocument.replace("YRIDBRUNTIMEVERIFPRINTTIME", CURRENT_TIME_WITH_MILLISECONDS);
 
 
 
@@ -1557,11 +1557,11 @@ bool YRDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt(int a_row_FOR_pdf_prin
 
 	tmpLatexFile.close();
 
-	QString pdfReceiptFileName = YRDBRUNTIMEVERIF_Process::compileLatex(prefixFileName);
+	QString pdfReceiptFileName = YRIDBRUNTIMEVERIF_Process::compileLatex(prefixFileName);
 
 	if (!pdfReceiptFileName.isEmpty())
 	{
-		YRDBRUNTIMEVERIF_Process::startPdfViewerProcess(pdfReceiptFileName);
+		YRIDBRUNTIMEVERIF_Process::startPdfViewerProcess(pdfReceiptFileName);
 	}
 
 	emit SIGNAL_INCREMENT_PROGRESS_BAR(98);
@@ -1570,9 +1570,9 @@ bool YRDBRUNTIMEVERIF_MainWindow::PRINT_event_log_excerpt(int a_row_FOR_pdf_prin
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::ON_Configfuration_panel_window_trigerred()
+void YRIDBRUNTIMEVERIF_MainWindow::ON_Configfuration_panel_window_trigerred()
 {
-    YRDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
+    YRIDBRUNTIMEVERIF_Windows *ALL_WINDOWS_INSTANCE =
     		YRI_DB_RUNTIME_VERIF_Config::GET_ALL_WINDOWS_instance();
 
     if (0 != ALL_WINDOWS_INSTANCE)
@@ -1584,7 +1584,7 @@ void YRDBRUNTIMEVERIF_MainWindow::ON_Configfuration_panel_window_trigerred()
 }
 
 
-bool YRDBRUNTIMEVERIF_MainWindow::ON_action_export_as_CSV_till_selected_SQL_event()
+bool YRIDBRUNTIMEVERIF_MainWindow::ON_action_export_as_CSV_till_selected_SQL_event()
 {
     int a_row = -1;
 
@@ -1606,7 +1606,7 @@ bool YRDBRUNTIMEVERIF_MainWindow::ON_action_export_as_CSV_till_selected_SQL_even
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
         ON_action_set_current_selected_SQL_event_as_filter_and_search()
 {
     //THE USER MUST MANUALLY UNCHECKED "checkBox_ALL_STATE_SAFETY_PROPERTIES"
@@ -1624,7 +1624,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
     }
 
 
-    YRDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item =
+    YRIDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item =
                                     Get_CURRENT_QTable_WIDGET();
 
 
@@ -1666,14 +1666,14 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::SOFT_Reset_selected()
+void YRIDBRUNTIMEVERIF_MainWindow::SOFT_Reset_selected()
 {
     lineEdit_SQL_event_filtering->clear();
 
     lineEdit_FILTERING_COUNT->clear();
 
 
-    YRDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item = Get_CURRENT_QTable_WIDGET();
+    YRIDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item = Get_CURRENT_QTable_WIDGET();
 
     if (0 != current_QTable_Widget_Item)
     {
@@ -1682,9 +1682,9 @@ void YRDBRUNTIMEVERIF_MainWindow::SOFT_Reset_selected()
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::ON_BUTON_Reset_pressed(bool soft /* = false */)
+void YRIDBRUNTIMEVERIF_MainWindow::ON_BUTON_Reset_pressed(bool soft /* = false */)
 {
-    YRDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item =
+    YRIDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item =
                                         Get_CURRENT_QTable_WIDGET();
 
     comboBox_global_filtering->setCurrentIndex(0);
@@ -1705,7 +1705,7 @@ void YRDBRUNTIMEVERIF_MainWindow::ON_BUTON_Reset_pressed(bool soft /* = false */
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::ON_BUTON_Filter_pressed()
+void YRIDBRUNTIMEVERIF_MainWindow::ON_BUTON_Filter_pressed()
 {
     //THE USER MUST MANUALLY UNCHECKED "checkBox_ALL_STATE_SAFETY_PROPERTIES"
     //before any other search filtering could occur here.
@@ -1727,7 +1727,7 @@ void YRDBRUNTIMEVERIF_MainWindow::ON_BUTON_Filter_pressed()
 
 
 //for combobox "comboBox_global_filtering"
-void YRDBRUNTIMEVERIF_MainWindow::RESET_comboBox_SQL_event_filtering()
+void YRIDBRUNTIMEVERIF_MainWindow::RESET_comboBox_SQL_event_filtering()
 {
     comboBox_SQL_event_filtering->setCurrentIndex(0);
 
@@ -1741,7 +1741,7 @@ void YRDBRUNTIMEVERIF_MainWindow::RESET_comboBox_SQL_event_filtering()
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
         RESET_comboBox_SQL_event_filtering(const QString &a_SQL_event_item)
 {
     comboBox_SQL_event_filtering->setCurrentIndex(0);
@@ -1756,7 +1756,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
         ON_QTABLEWIDGET_FILTER_ITEM_selected(const QString &a_SQL_event_item)
 {
     //THE USER MUST MANUALLY UNCHECKED "checkBox_ALL_STATE_SAFETY_PROPERTIES"
@@ -1784,7 +1784,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
     }
 
 
-    YRDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item = Get_CURRENT_QTable_WIDGET();
+    YRIDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item = Get_CURRENT_QTable_WIDGET();
 
     if (0 == current_QTable_Widget_Item)
     {
@@ -1806,7 +1806,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
         ON_QTABLEWIDGET_FILTER_ITEM_Exact_GIVEN(const QString &a_SourceSUT__OR__SQLEvent__Text)
 {
     if (a_SourceSUT__OR__SQLEvent__Text.isEmpty())
@@ -1815,7 +1815,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
     }
 
 
-    YRDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item =
+    YRIDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item =
                                         Get_CURRENT_QTable_WIDGET();
 
     if (0 == current_QTable_Widget_Item)
@@ -1853,7 +1853,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-void *YRDBRUNTIMEVERIF_MainWindow::ACTION_USER_GUIDE_method()
+void *YRIDBRUNTIMEVERIF_MainWindow::ACTION_USER_GUIDE_method()
 {
 	QStringList progArguments;
 
@@ -1865,7 +1865,7 @@ void *YRDBRUNTIMEVERIF_MainWindow::ACTION_USER_GUIDE_method()
 
 	emit SIGNAL_INCREMENT_PROGRESS_BAR(30);
 
-    YRDBRUNTIMEVERIF_Process::startDetached
+    YRIDBRUNTIMEVERIF_Process::startDetached
             (aProcess,
              YRI_DB_RUNTIME_VERIF_Config::pathToPdfReader,
              progArguments);
@@ -1874,7 +1874,7 @@ void *YRDBRUNTIMEVERIF_MainWindow::ACTION_USER_GUIDE_method()
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::SET__Sut__VISIBILITY_FOR_logging(QString a_SUT_ID)
+void YRIDBRUNTIMEVERIF_MainWindow::SET__Sut__VISIBILITY_FOR_logging(QString a_SUT_ID)
 {
     //We check if user has instructed to log this SUT SQL events
     bool render_logging_SUT_visible = Is_SUT__to__LOG(a_SUT_ID);
@@ -1885,9 +1885,9 @@ void YRDBRUNTIMEVERIF_MainWindow::SET__Sut__VISIBILITY_FOR_logging(QString a_SUT
 }
 
 
-YRDBRUNTIMEVERIF_TableWidget* YRDBRUNTIMEVERIF_MainWindow::Get_CURRENT_QTable_WIDGET()
+YRIDBRUNTIMEVERIF_TableWidget* YRIDBRUNTIMEVERIF_MainWindow::Get_CURRENT_QTable_WIDGET()
 {
-    YRDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item = 0;
+    YRIDBRUNTIMEVERIF_TableWidget *current_QTable_Widget_Item = 0;
 
     if (0 == tabWidget_SQL_ERROR_EVENT_LOGGING->currentIndex())
     {
@@ -1903,7 +1903,7 @@ YRDBRUNTIMEVERIF_TableWidget* YRDBRUNTIMEVERIF_MainWindow::Get_CURRENT_QTable_WI
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::set_runtime_monitor_name_ERROR_LOGGING_visible(bool aVisibleValue)
+void YRIDBRUNTIMEVERIF_MainWindow::set_runtime_monitor_name_ERROR_LOGGING_visible(bool aVisibleValue)
 {
     tableWidget_LOGGING_ERROR_SOURCE_LOCATION->setVisible(aVisibleValue);
 
@@ -1913,7 +1913,7 @@ void YRDBRUNTIMEVERIF_MainWindow::set_runtime_monitor_name_ERROR_LOGGING_visible
 }
 
 
-void YRDBRUNTIMEVERIF_MainWindow::
+void YRIDBRUNTIMEVERIF_MainWindow::
         contextMenuEvent(QContextMenuEvent *event)
 {
     uint VISIBLE_unique_row_count = 0;
@@ -1942,7 +1942,7 @@ void YRDBRUNTIMEVERIF_MainWindow::
 }
 
 
-bool YRDBRUNTIMEVERIF_MainWindow::
+bool YRIDBRUNTIMEVERIF_MainWindow::
         MAP___Assign_SutID__to__SutNAMEQString(QString A_SUT_ID,
                                                QString SutNAMEQString)
 {

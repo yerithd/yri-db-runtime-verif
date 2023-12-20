@@ -14,7 +14,7 @@
 #include <QtWidgets/QProgressBar>
 
 
-class YRDBRUNTIMEVERIF_CommonsWindow;
+class YRIDBRUNTIMEVERIF_CommonsWindow;
 
 
 class YRI_DB_RUNTIME_VERIF_ProgressBar : public QProgressBar
@@ -23,7 +23,7 @@ class YRI_DB_RUNTIME_VERIF_ProgressBar : public QProgressBar
 
 public:
 
-    YRI_DB_RUNTIME_VERIF_ProgressBar(YRDBRUNTIMEVERIF_CommonsWindow *aYerothParentWindow);
+    YRI_DB_RUNTIME_VERIF_ProgressBar(YRIDBRUNTIMEVERIF_CommonsWindow *aYerothParentWindow);
 
     inline virtual ~YRI_DB_RUNTIME_VERIF_ProgressBar()
     {

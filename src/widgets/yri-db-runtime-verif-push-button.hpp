@@ -11,18 +11,18 @@
 #include <QtWidgets/QPushButton>
 
 
-class YRDBRUNTIMEVERIF_QPushButton : public QPushButton
+class YRIDBRUNTIMEVERIF_QPushButton : public QPushButton
 {
     Q_OBJECT
 
 public:
 
-    inline YRDBRUNTIMEVERIF_QPushButton(QWidget *w)
+    inline YRIDBRUNTIMEVERIF_QPushButton(QWidget *w)
     :QPushButton(w)
     {
     }
 
-    virtual inline ~YRDBRUNTIMEVERIF_QPushButton()
+    virtual inline ~YRIDBRUNTIMEVERIF_QPushButton()
     {
     }
 

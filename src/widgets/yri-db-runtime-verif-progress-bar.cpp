@@ -10,7 +10,7 @@
 #include "src/windows/yri-db-runtime-verif-COMMONS-window.hpp"
 
 
-YRI_DB_RUNTIME_VERIF_ProgressBar::YRI_DB_RUNTIME_VERIF_ProgressBar(YRDBRUNTIMEVERIF_CommonsWindow *aYerothParentWindow)
+YRI_DB_RUNTIME_VERIF_ProgressBar::YRI_DB_RUNTIME_VERIF_ProgressBar(YRIDBRUNTIMEVERIF_CommonsWindow *aYerothParentWindow)
 :QProgressBar((QWidget *) aYerothParentWindow),
  _setup(false)
 {

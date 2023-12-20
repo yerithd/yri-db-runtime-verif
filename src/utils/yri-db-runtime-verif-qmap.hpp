@@ -14,18 +14,18 @@
 #include <QtCore/QMap>
 
 
-class YRDBRUNTIMEVERIF_QMap : public QMap<uint, QString>
+class YRIDBRUNTIMEVERIF_QMap : public QMap<uint, QString>
 {
 public:
 
-	inline YRDBRUNTIMEVERIF_QMap()
+	inline YRIDBRUNTIMEVERIF_QMap()
 	:QMap<uint, QString>(),
 	 _current_IDX(0),
 	 _max_elements_SIZE(70000)
 	{
 	}
 
-	inline virtual ~YRDBRUNTIMEVERIF_QMap()
+	inline virtual ~YRIDBRUNTIMEVERIF_QMap()
 	{
 	}
 

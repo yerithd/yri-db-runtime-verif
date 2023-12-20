@@ -18,33 +18,33 @@ class QString;
 class QDesktopWidget;
 
 
-class YRDBRUNTIMEVERIF_Windows : public QObject
+class YRIDBRUNTIMEVERIF_Windows : public QObject
 {
 	Q_OBJECT
 
 public:
 
-	inline YRDBRUNTIMEVERIF_Windows(QDesktopWidget *desktopWidget)
+	inline YRIDBRUNTIMEVERIF_Windows(QDesktopWidget *desktopWidget)
 	:_yrdbruntimeverif_setup_Window(0),
 	 _yrdbruntimeverif_main_Window(0),
 	 _desktopWidget(desktopWidget)
 	{
 	}
 
-	virtual ~YRDBRUNTIMEVERIF_Windows();
+	virtual ~YRIDBRUNTIMEVERIF_Windows();
 
-	virtual void createAll_YRDBRUNTIMEVERIF_Windows();
+	virtual void createAll_YRIDBRUNTIMEVERIF_Windows();
 
 	virtual void CLOSE_allWindows();
 
 
-    YRDBRUNTIMEVERIF_SetupWindow *_yrdbruntimeverif_setup_Window;
+    YRIDBRUNTIMEVERIF_SetupWindow *_yrdbruntimeverif_setup_Window;
 
-    YRDBRUNTIMEVERIF_MainWindow *_yrdbruntimeverif_main_Window;
+    YRIDBRUNTIMEVERIF_MainWindow *_yrdbruntimeverif_main_Window;
 
 private:
 
-	inline YRDBRUNTIMEVERIF_Windows()
+	inline YRIDBRUNTIMEVERIF_Windows()
 	:_yrdbruntimeverif_setup_Window(0),
 	 _yrdbruntimeverif_main_Window(0),
 	 _desktopWidget(0)

@@ -221,7 +221,7 @@ bool YRI_DB_RUNTIME_VERIF_Utils::GREP_YERITH_FILE_CONTENT(const QString &file_fu
 
 
 	bool checkProcessFinished =
-            YRDBRUNTIMEVERIF_Process::startAndWaitForFinished(
+            YRIDBRUNTIMEVERIF_Process::startAndWaitForFinished(
                                     GREP_PROCESS,
                                     "/bin/grep",
                                     progArguments,
