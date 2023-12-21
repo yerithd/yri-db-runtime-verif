@@ -83,6 +83,8 @@ SOURCES = src/windows/yri-db-runtime-verif-COMMONS-window.cpp \
 
 
 
+#YRI-USER-CODE-INCLUDE
+
 
 
 RESOURCES    = yri-db-runtime-verif.qrc

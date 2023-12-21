@@ -13,8 +13,8 @@ MYFILE=YRI_DB_RUNTIME_VERIF_HEADERS_FOR_yerith_erp.TXT
 
 echo "processing files within '${MYFILE}'"
 
-echo "cp yri.db-runtime.verif.xml /home/yer/yerith-erp-3-0/src/dbus/yri.db-runtime.verif.xml "
-cp yri.db-runtime.verif.xml /home/yer/yerith-erp-3-0/src/dbus/yri.db-runtime.verif.xml 
+echo "cp yri.db-runtime.verif.xml ${HOME}/yerith-erp-3-0/src/dbus"
+cp yri.db-runtime.verif.xml ${HOME}/yerith-erp-3-0/src/dbus 
 
 n=1
 while read LINE; do
