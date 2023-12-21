@@ -1,6 +1,6 @@
 [Unit]
 Description=YERITH-ERP-PGI-3.0 RUNTIME VERIFICATION DAEMON SERVICE
-After=mysql.target
+After=mariadb.target
 
 [Service]
 Type=exec

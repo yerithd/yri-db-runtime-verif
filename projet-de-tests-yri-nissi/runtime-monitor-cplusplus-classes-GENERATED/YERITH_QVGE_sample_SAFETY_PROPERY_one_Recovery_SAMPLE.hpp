@@ -6,7 +6,7 @@
 #ifndef _YRI_DB_VERIF_RUNTIME_MONITOR_YERITH_QVGE_sample_SAFETY_PROPERY_one_Recovery_SAMPLE_HPP_
 #define _YRI_DB_VERIF_RUNTIME_MONITOR_YERITH_QVGE_sample_SAFETY_PROPERY_one_Recovery_SAMPLE_HPP_
 
-#include "include/yr-db-runtime-verif-MONITOR.hpp"
+#include "include/yri-db-runtime-verif-MONITOR.hpp"
 
 #include "yri_sd_runtime_verif/utils/YRI_CPP_UTILS.hpp"
 
