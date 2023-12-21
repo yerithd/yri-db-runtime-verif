@@ -206,7 +206,6 @@ int main(int argc, char *argv[])
 
     QVector<YRI_DB_RUNTIME_VERIF_Monitor *> user_defined_Runtime_Monitors;
 
-
     //yri-USER-RUNTIME-MONITOR-DECLARATION-INSTANTIATION
     //######################################################################################
 
