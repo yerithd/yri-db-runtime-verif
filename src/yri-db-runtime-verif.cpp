@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
         errMsg.append("PLEASE TRY logging out AND THEN logging in. \n\n"
         			  "In case yri-db-runtime-verif is still not functional,\n"
         			  "please contact DR.-ING. DIPL.-INF. XAVIER NOUNDOU: "
-                      "'yerith.d@gmail.com'.");
+                      "'YERITH.xavier@gmail.com'.");
 
         QMessageBox::critical(&atoolBar,
         					  "yri-db-runtime-verif",
@@ -173,7 +173,7 @@ int main(int argc, char *argv[])
         errMsg.append(QObject::tr("DATABASE SERVER: %1.\n\n"
                               	  "Last error message (%2).\n\n"
                               	  "Please contact PROF. DR.-ING. DIPL.-INF. XAVIER NOUNDOU\n"
-                              	  "\t(yerith.d@gmail.com)\n")
+                              	  "\t(YERITH.xavier@gmail.com)\n")
         				.arg(database.db_ip_address(),
         					 database.lastError().text()));
 

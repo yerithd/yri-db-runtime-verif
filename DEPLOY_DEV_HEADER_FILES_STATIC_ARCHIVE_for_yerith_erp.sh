@@ -1,6 +1,6 @@
 #!/bin/bash
 # @AUTHOR: DR.-ING. DIPL.-INF. XAVIER NOUNDOU
-# @EMAIL: yerith.d@gmail.com
+# @EMAIL: YERITH.xavier@gmail.com
 
 
 #yri_compile_LIB_FOR_YERITH_ERP_3_0_j4.sh
